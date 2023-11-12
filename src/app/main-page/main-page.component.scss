@@ -1,0 +1,92 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFCF3;
+    height: 15%;
+    gap: 200px;
+    padding: 0px 100px;
+    font-family: 'Overpass', sans-serif;
+}
+
+.headline {
+    padding-top: 150px;
+    font-size: 128px;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Syne', sans-serif;
+}
+
+.underneath-headline {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #FF9900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    img {
+        width: 628px;
+        height: 3px;
+    }
+}
+
+.headline-contacts {
+    font-size: 23px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        position: relative;
+        left: 620px;
+        bottom: 200px;
+        animation: arrow-down1 4s linear infinite;
+        background-image: none;
+    }
+}
+
+@keyframes arrow-down1 {
+    from {
+        background-image: url('../../assets/img/animations/arrow-down1.png');
+        opacity: 1;
+    }
+
+    5% {
+        background-image: url('../../assets/img/animations/arrow-down2.png');
+    }
+
+    8% {
+        background-image: url('../../assets/img/animations/arrow-down3.png');
+    }
+
+    11% {
+        background-image: url('../../assets/img/animations/arrow-down4.png');
+    }
+
+    14% {
+        background-image: url('../../assets/img/animations/arrow-down5.png');
+    }
+
+    17% {
+        background-image: url('../../assets/img/animations/arrow-down6.png');
+    }
+
+    20% {
+        background-image: url('../../assets/img/animations/arrow-down7.png');
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+.headline-email {
+    rotate: 270deg;
+    margin-left: -120px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

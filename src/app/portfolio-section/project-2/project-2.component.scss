@@ -1,0 +1,128 @@
+.project {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 50px 100px;
+
+    span {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    img {
+        height: 400px;
+        width: auto;
+        padding: 10px 0px;
+        z-index: 1;
+        filter: grayscale(1);
+    }
+}
+
+.grayscale-none {
+    filter: grayscale(0) !important;
+}
+
+.d-none {
+    display: none;
+}
+
+.info-animation {
+    animation: slide 0.25s ease-in forwards;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-800px);
+    }
+}
+
+.frame-arrow-animation {
+    animation: rotate-expand 0.25s ease-in forwards;
+}
+
+@keyframes rotate-expand {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        rotate: -145deg;
+        scale: 2;
+    }
+}
+
+.frame {
+    height: 400px;
+    width: 620px;
+    border: solid 4px black;
+    position: relative;
+    right: -622px;
+    z-index: 2;
+    top: 30px;
+    pointer-events: none;
+
+    img {
+        height: 48px;
+        width: 48px;
+        position: relative;
+        left: -28px;
+        top: 140px;
+    }
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
+    padding-top: 100px;
+    position: absolute;
+
+    h1 {
+        font-size: 34px;
+        font-weight: 800;
+        font-family: 'Syne', sans-serif;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    h2 {
+        font-size: 23px;
+        font-weight: 400;
+        font-family: 'Overpass', sans-serif;
+        color: #FF9900;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'Overpass', sans-serif;
+    }
+
+    button {
+        font-size: 23px;
+        font-weight: 400;
+        font-family: 'Overpass', sans-serif;
+        width: 200px;
+        height: 70px;
+        padding: 20px 60px;
+        border: solid 4px black;
+        background-color: rgba(255, 255, 255, 0);
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+
+    button:hover {
+        width: 240px;
+        font-weight: bold;
+    }
+}

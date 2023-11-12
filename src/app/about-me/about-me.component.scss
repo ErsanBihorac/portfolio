@@ -1,0 +1,102 @@
+.about-me-page {
+    background-color: #FFFCF3;
+    padding: 30px 100px;
+    font-family: 'Overpass', sans-serif;
+    margin-bottom: -600px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 78px;
+        font-weight: 800;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        text-align: center;
+        font-family: 'Syne', sans-serif;
+    }
+
+    span {
+        font-size: 23px;
+        font-weight: 400;
+    }
+
+    img {
+        height: 553px;
+        width: 553px;
+        margin-top: 140px;
+    }
+
+    button {
+        background-color: #FFFCF3;
+        border: solid 4px black;
+        height: 68px;
+        width: 212px;
+        font-size: 23px;
+        font-weight: 400;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            width: 262px;
+            font-weight: bold;
+        }
+    }
+}
+
+.image-frame {
+    height: 530px;
+    width: 530px;
+    border: solid 4px black;
+    position: relative;
+    left: 912px;
+    bottom: 528px;
+    transition: 0.25s;
+    opacity: 0;
+    z-index: 2;
+}
+
+.opacity {
+    opacity: 1 !important;
+}
+
+.move-down {
+    animation: arrow-move-down 0.2s ease-in-out forwards;
+}
+
+@keyframes arrow-move-down {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-100px, 100px);
+    }
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    width: 664px;
+    gap: 52px;
+}
+
+.orange:hover {
+    color: #FF9900;
+}
+
+.button-design {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.arrow-left {
+    position: relative;
+    left: 80px;
+    bottom: 520px;
+}

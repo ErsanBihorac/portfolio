@@ -1,0 +1,117 @@
+.burger-menu-page {
+    height: calc(100vh - 152px);
+    padding: 0px 100px;
+    font-family: 'Syne', sans-serif;
+    background-color: black;
+    background: linear-gradient(187deg, transparent 70%, #000000 0) top left;
+    cursor: default;
+}
+
+.headers {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    justify-content: center;
+
+    span {
+        font-size: 96px;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.burger-menu-footer {
+    color: #FFFCF3;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 20px;
+
+    h1 {
+        font-weight: 800;
+        font-size: 78px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        cursor: pointer;
+    }
+
+    h1:hover {
+        color: #FF9900;
+    }
+
+    h3 {
+        font-family: 'Overpass';
+        font-weight: 300;
+        font-size: 23px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
+
+.lower-part {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos {
+    display: flex;
+    gap: 42px;
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.logo-animation {
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        transform: translateY(-12px);
+    }
+}
+
+.about-me-rectangle {
+    position: absolute;
+    margin-top: -460px;
+    margin-left: 428px;
+    width: 580px;
+    height: 167px;
+    cursor: pointer;
+}
+
+.myskills-rectangle {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 428px;
+    width: 580px;
+    height: 167px;
+    cursor: pointer;
+}
+
+.portfolio-rectangle {
+    position: absolute;
+    margin-top: 460px;
+    margin-left: 428px;
+    width: 580px;
+    height: 167px;
+    cursor: pointer;
+}
+
+.rectangle1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.rectangle2 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.rectangle3 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

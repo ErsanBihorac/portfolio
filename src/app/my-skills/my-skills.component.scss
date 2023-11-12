@@ -1,0 +1,95 @@
+.my-skills-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+}
+
+.my-skills-header {
+    font-size: 78px;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+    position: relative;
+    top: 50px;
+    background-color: #FFFCF3;
+    font-family: 'Syne', sans-serif;
+}
+
+.my-skills-box {
+    border: solid 4px black;
+    height: 600px;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    span {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+.my-skills-box-top {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.my-skills-box-bottom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    :hover {
+        color: #FF9900;
+    }
+
+    img:hover+span {
+        color: #FF9900;
+    }
+
+    img:hover {
+        animation: skills-icon 0.5s ease-in-out;
+    }
+}
+
+@keyframes skills-icon {
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.move-down {
+    animation: arrow-move-down 0.2s ease-in-out forwards;
+}
+
+@keyframes arrow-move-down {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(100px, 100px);
+    }
+}
+
+.orange:hover {
+    color: #FF9900;
+}

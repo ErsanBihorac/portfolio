@@ -1,0 +1,18 @@
+.header {
+    background-color: #FFFCF3;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    height: 92px;
+    width: 1440px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+
+    img {
+        height: 30px;
+        width: auto;
+        cursor: pointer;
+    }
+}
