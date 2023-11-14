@@ -6,6 +6,15 @@
     gap: 200px;
     padding: 0px 100px;
     font-family: 'Overpass', sans-serif;
+
+    @media (max-width: 1650px) {
+        width: auto;
+    }
+
+    @media (max-width: 900px) {
+        gap: 100px;
+        height: 10%;
+    }
 }
 
 .headline {
@@ -14,6 +23,14 @@
     font-weight: 800;
     text-align: center;
     font-family: 'Syne', sans-serif;
+
+    @media (max-width: 1650px) {
+        font-size: 85px;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 45px;
+    }
 }
 
 .underneath-headline {
@@ -29,6 +46,22 @@
     img {
         width: 628px;
         height: 3px;
+
+        @media (max-width: 1650px) {
+            width: 300px;
+        }
+
+        @media (max-width: 900px) {
+            width: 180px;
+        }
+    }
+
+    @media (max-width: 1650px) {
+        font-size: 43px;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 23px;
     }
 }
 
@@ -44,6 +77,23 @@
         bottom: 200px;
         animation: arrow-down1 4s linear infinite;
         background-image: none;
+
+        @media (max-width: 1650px) {
+            position: absolute;
+            right: 70px;
+            margin-top: -184px;
+            left: unset;
+            bottom: unset;
+        }
+        @media (max-width: 900px) {
+            margin-top: -100px;
+        }
+    }
+
+    span {
+        @media (max-width: 900px) {
+            padding-top: 100px;
+        }
     }
 }
 

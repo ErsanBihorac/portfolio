@@ -12,6 +12,16 @@
     background: linear-gradient(187deg, transparent 300px, #000000 0) top left;
     font-family: 'Overpass', sans-serif;
     cursor: default;
+
+    @media (max-width:1650px) {
+        justify-content: flex-start;
+        height: 2000px;
+        padding-top: 300px;
+    }
+
+    @media (max-width: 1300px) {
+        align-items: center;
+    }
 }
 
 .footer-middle {
@@ -59,6 +69,14 @@
         background-color: black;
         cursor: pointer;
         margin-top: 20px;
+    }
+
+    @media (max-width: 1650px) {
+        margin-left: 25%;
+    }
+
+    @media (max-width: 1300px) {
+        margin-left: 0;
     }
 }
 
@@ -189,6 +207,12 @@
         height: 30px;
         width: auto;
     }
+
+    @media (max-width: 1300px) {
+        flex-direction: column-reverse;
+        padding-top: 40px;
+        gap: 30px;
+    }
 }
 
 .say-hi {
@@ -218,6 +242,13 @@
     img {
         cursor: pointer;
     }
+
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        align-items: unset;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .professional-contacts {
@@ -227,6 +258,10 @@
 
     img {
         height: 40px;
+    }
+
+    @media (max-width: 1300px) {
+        justify-content: center;
     }
 }
 
@@ -240,6 +275,12 @@
 
     &:hover {
         font-weight: bold;
+    }
+
+    @media (max-width: 1300px) {
+        position: absolute;
+        margin-top: 114px;
+        margin-left: 68px;
     }
 }
 
@@ -255,6 +296,12 @@
     left: 50px;
     background-color: #FF9900;
     animation: slide-right 0.2s ease-in-out forwards;
+
+    @media (max-width: 1300px) {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 450px;
+    }
 }
 
 @keyframes slide-right {

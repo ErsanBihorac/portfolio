@@ -31,6 +31,10 @@
     position: relative;
     left: 380px;
     bottom: 100px;
+
+    @media(max-width: 900px) {
+        left: -460px;
+    }
 }
 
 .syne {

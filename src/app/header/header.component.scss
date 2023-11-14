@@ -15,4 +15,12 @@
         width: auto;
         cursor: pointer;
     }
+
+    @media (max-width: 1650px) {
+        width: 80vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
 }

@@ -10,12 +10,21 @@ export class Project1Component {
   removeGrayscale() {
     document.getElementById('img1')?.classList.add('grayscale-none');
     document.getElementById('frame1')?.classList.remove('d-none');
-    document.getElementById('project-info1')?.classList.add('info-animation');
+    if (window.innerWidth >= 1650) {
+      document.getElementById('project-info1')?.classList.add('info-animation');
+    } else {
+      document.getElementById('project-info1')?.classList.add('info-animation-1650px');
+    }
+
   }
 
   addGrayscale() {
     document.getElementById('img1')?.classList.remove('grayscale-none');
     document.getElementById('frame1')?.classList.add('d-none');
-    document.getElementById('project-info1')?.classList.remove('info-animation');
+    if (window.innerWidth >= 1650) {
+      document.getElementById('project-info1')?.classList.remove('info-animation');
+    } else {
+      document.getElementById('project-info1')?.classList.remove('info-animation-1650px');
+    }
   }
 }

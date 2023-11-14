@@ -12,7 +12,6 @@ import { Project1Component } from './portfolio-section/project-1/project-1.compo
 import { Project2Component } from './portfolio-section/project-2/project-2.component';
 import { Project3Component } from './portfolio-section/project-3/project-3.component';
 import { Project4Component } from './portfolio-section/project-4/project-4.component';
-import { Project5Component } from './portfolio-section/project-5/project-5.component';
 import { FooterComponent } from './footer/footer.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
 
@@ -28,7 +27,6 @@ import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
     Project2Component,
     Project3Component,
     Project4Component,
-    Project5Component,
     FooterComponent,
     BurgerMenuComponent
   ],
