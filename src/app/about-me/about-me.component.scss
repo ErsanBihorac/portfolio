@@ -2,7 +2,6 @@
     background-color: #FFFCF3;
     padding: 30px 100px;
     font-family: 'Overpass', sans-serif;
-    margin-bottom: -600px;
 }
 
 .about-me {
@@ -107,6 +106,13 @@
     font-weight: 400;
 }
 
+.arrow-box {
+    overflow: hidden;
+    max-width: 100vw;
+    position: absolute;
+    top: 2700px;
+}
+
 .arrow-left {
     position: relative;
     left: 80px;
@@ -119,7 +125,5 @@
         bottom: -830px;
     }
 
-    @media (max-width: 900px) {
-
-    }
+    @media (max-width: 900px) {}
 }

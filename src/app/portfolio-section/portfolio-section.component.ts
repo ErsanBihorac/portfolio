@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio-section.component.scss']
 })
 export class PortfolioSectionComponent {
-
+  addArrowAnimation() {
+    document.getElementById('arrow-left2')?.classList.add('move-down');
+  }
 }

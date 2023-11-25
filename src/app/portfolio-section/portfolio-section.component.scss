@@ -27,14 +27,30 @@
     }
 }
 
+.arrow-box {
+    overflow: hidden;
+    max-width: 100vw;
+    margin: 100px 0px;
+}
+
+.move-down {
+    animation: arrow-move-down 0.2s ease-in-out forwards;
+}
+
+@keyframes arrow-move-down {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-100px, 100px);
+    }
+}
+
 .arrow-left {
     position: relative;
-    left: 380px;
-    bottom: 100px;
-
-    @media(max-width: 900px) {
-        left: -460px;
-    }
+    left: 440px;
 }
 
 .syne {
