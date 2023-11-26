@@ -31,6 +31,20 @@
     overflow: hidden;
     max-width: 100vw;
     margin: 100px 0px;
+    position: relative;
+    bottom: 100px;
+
+    @media (max-width: 1500px) {
+        position: relative;
+        bottom: 200px;
+    }
+
+    @media (max-width: 1100px) {
+        overflow: unset;
+        position: relative;
+        bottom: 200px;
+        right: 400px;
+    }
 }
 
 .move-down {
@@ -46,11 +60,6 @@
         opacity: 1;
         transform: translate(-100px, 100px);
     }
-}
-
-.arrow-left {
-    position: relative;
-    left: 440px;
 }
 
 .syne {

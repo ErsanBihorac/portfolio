@@ -2,13 +2,14 @@
     background-color: #FFFCF3;
     padding: 30px 100px;
     font-family: 'Overpass', sans-serif;
+    height: 100vh;
 }
 
 .about-me {
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 1650px) {
+    @media (max-width: 1400px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -32,6 +33,10 @@
         height: 553px;
         width: 553px;
         margin-top: 140px;
+
+        @media (max-width: 1400px) {
+            margin-top: unset;
+        }
     }
 
     button {
@@ -48,6 +53,10 @@
             width: 262px;
             font-weight: bold;
         }
+
+        @media (max-width: 1400px) {
+            display: none;
+        }
     }
 }
 
@@ -62,10 +71,10 @@
     opacity: 0;
     z-index: 2;
 
-    @media (max-width: 1650px) {
-        left: 460px;
+    @media (max-width: 1400px) {
+        left: 340px;
         bottom: 520px;
-        margin-bottom: 300px;
+        margin-bottom: unset;
     }
 }
 
@@ -109,21 +118,16 @@
 .arrow-box {
     overflow: hidden;
     max-width: 100vw;
-    position: absolute;
-    top: 2700px;
-}
-
-.arrow-left {
     position: relative;
     left: 80px;
     bottom: 520px;
 
-    @media (max-width: 1650px) {
-        position: absolute;
-        left: unset;
-        right: 32vw;
-        bottom: -830px;
+    @media (max-width: 1400px) {
+        left: -240px;
+        overflow: unset;
     }
 
-    @media (max-width: 900px) {}
+    @media (max-width: 1100px) {
+        left: -440px;
+    }
 }
