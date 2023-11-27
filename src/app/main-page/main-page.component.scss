@@ -15,6 +15,10 @@
         gap: 100px;
         height: 10%;
     }
+
+    @media (max-width: 600px) {
+        padding: 0px 30px;
+    }
 }
 
 .headline {
@@ -85,8 +89,13 @@
             left: unset;
             bottom: unset;
         }
+
         @media (max-width: 900px) {
             margin-top: -100px;
+        }
+
+        @media (max-width: 600px) {
+            right: 0px;
         }
     }
 
@@ -139,4 +148,8 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+
+    @media (max-width: 600px) {
+        margin-left: -84px;
+    }
 }

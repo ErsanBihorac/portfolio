@@ -11,15 +11,16 @@
                 <a href="#footer"><button>Let's talk</button></a>
             </div>
         </div>
-        <img (mouseover)="displayFrame()" (mouseout)="hideFrame()" src="../../assets/img/about-me-img.png"
-            alt="Image of myself">
+        <div>
+            <img (mouseover)="displayFrame()" (mouseout)="hideFrame()" src="../../assets/img/about-me-img.png"
+                alt="Image of myself">
+
+            <div (mouseover)="displayFrame()" (mouseout)="hideFrame()" id="image-frame" class="image-frame"></div>
+        </div>
     </div>
 
-    <div (mouseover)="displayFrame()" (mouseout)="hideFrame()" id="image-frame" class="image-frame"></div>
-
     <div class="arrow-box">
-        <img (mouseover)="addArrowAnimation()" id="arrow-left" src="../../assets/img/arrow-left.png"
-            alt="arrow-left">
+        <img (mouseover)="addArrowAnimation()" id="arrow-left" src="../../assets/img/arrow-left.png" alt="arrow-left">
     </div>
 
 </div>

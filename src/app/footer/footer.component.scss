@@ -4,6 +4,7 @@
     background-color: black;
     padding: 30px 100px;
     padding-bottom: 80px;
+    margin-top: -200px;
     color: #FFFCF3;
     height: 100vh;
     justify-content: space-between;
@@ -12,12 +13,18 @@
     font-family: 'Overpass', sans-serif;
     cursor: default;
 
+    @media (max-height:1000px) {
+        background: linear-gradient(187deg, transparent 250px, #000000 0) top left;
+        font-family: 'Overpass', sans-serif;
+    }
+
     @media (max-width:1650px) {
-        padding-top: 300px;
+        padding-top: 100px;
     }
 
     @media (max-width: 1300px) {
         align-items: center;
+        padding-top: 300px;
     }
 }
 
@@ -330,12 +337,12 @@
     }
 
     @media (min-height:1000px) {
-        top: 80vh;
+        top: 80vh !important;
     }
 
     @media (max-width:1650px) {
         top: 516px;
-        left: 1000px;
+        left: 80vw;
     }
 
     @media (max-width:1300px) {

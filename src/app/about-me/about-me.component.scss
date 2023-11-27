@@ -1,8 +1,12 @@
 .about-me-page {
     background-color: #FFFCF3;
-    padding: 30px 100px;
+    padding: 0px 100px;
     font-family: 'Overpass', sans-serif;
     height: 100vh;
+
+    @media (max-width: 600px) {
+        padding: 0px 30px;
+    }
 }
 
 .about-me {
@@ -22,6 +26,10 @@
         margin-block-end: 0;
         text-align: center;
         font-family: 'Syne', sans-serif;
+
+        @media (max-width: 700px) {
+            font-size: 45px;
+        }
     }
 
     span {
@@ -36,6 +44,11 @@
 
         @media (max-width: 1400px) {
             margin-top: unset;
+        }
+
+        @media (max-width: 700px) {
+            height: 400px;
+            width: 400px;
         }
     }
 
@@ -65,16 +78,17 @@
     width: 530px;
     border: solid 4px black;
     position: relative;
-    left: 912px;
+    left: 30px;
     bottom: 528px;
     transition: 0.25s;
     opacity: 0;
     z-index: 2;
 
-    @media (max-width: 1400px) {
-        left: 340px;
-        bottom: 520px;
-        margin-bottom: unset;
+    @media (max-width: 700px) {
+        width: 380px;
+        height: 380px;
+        left: 24px;
+        bottom: 380px;
     }
 }
 
@@ -102,6 +116,10 @@
     flex-direction: column;
     width: 664px;
     gap: 52px;
+
+    @media (max-width: 700px) {
+        width: 400px;
+    }
 }
 
 .orange:hover {
@@ -130,4 +148,14 @@
     @media (max-width: 1100px) {
         left: -440px;
     }
+
+    @media (max-width: 770px) {
+        left: -580px;
+
+        img {
+            margin-top: 100px;
+            height: 250px;
+        }
+    }
+
 }
