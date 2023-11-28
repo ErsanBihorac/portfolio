@@ -16,11 +16,10 @@ export class BurgerMenuComponent {
   ];
 
   goTo(id: string) {
+    this.burgerAnimationReverse();
     this.closeBurgerMenu();
     document.getElementById(id)?.scrollIntoView();
-    this.burgerAnimationReverse();
   }
-
 
   burgerAnimation() {
     let img = document.getElementById('img-burger') as HTMLImageElement;

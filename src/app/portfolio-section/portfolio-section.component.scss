@@ -60,6 +60,10 @@
             height: 250px;
         }
     }
+
+    @media (max-width: 520px) {
+        margin-left: -150px;
+    }
 }
 
 .move-down {

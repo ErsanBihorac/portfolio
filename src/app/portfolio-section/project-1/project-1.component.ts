@@ -10,6 +10,7 @@ export class Project1Component {
   removeGrayscale() {
     document.getElementById('img1')?.classList.add('grayscale-none');
     document.getElementById('frame1')?.classList.remove('d-none');
+    document.getElementById('project-info1')?.classList.remove('d-none');
     if (window.innerWidth >= 1650) {
       document.getElementById('project-info1')?.classList.add('info-animation');
     } else {
@@ -21,6 +22,7 @@ export class Project1Component {
   addGrayscale() {
     document.getElementById('img1')?.classList.remove('grayscale-none');
     document.getElementById('frame1')?.classList.add('d-none');
+    document.getElementById('project-info1')?.classList.add('d-none');
     if (window.innerWidth >= 1650) {
       document.getElementById('project-info1')?.classList.remove('info-animation');
     } else {

@@ -6,7 +6,7 @@
     padding-bottom: 80px;
     margin-top: -200px;
     color: #FFFCF3;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: space-between;
     background-size: 100%;
     background: linear-gradient(187deg, transparent 300px, #000000 0) top left;
@@ -26,6 +26,14 @@
         align-items: center;
         padding-top: 300px;
     }
+
+    @media (max-height: 800px) {
+        padding-bottom: 30vh;
+    }
+
+    @media (max-height: 700px) {
+        padding-bottom: 50vh;
+    }
 }
 
 .footer-middle {
@@ -41,11 +49,19 @@
         margin-block-start: 0;
         margin-block-end: 0;
         color: #FF9900;
+
+        @media (max-width: 650px) {
+            text-align: center;
+        }
     }
 
     h3 {
         font-size: 23px;
         font-weight: 400;
+
+        @media (max-width: 650px) {
+            text-align: center;
+        }
     }
 
     span {
@@ -82,6 +98,10 @@
     @media (max-width: 1300px) {
         margin-left: 0;
     }
+
+    @media (max-width: 650px) {
+        width: 340px;
+    }
 }
 
 .inputs {
@@ -100,6 +120,9 @@
         width: 570px;
         cursor: pointer;
 
+        @media (max-width: 650px) {
+            width: 340px;
+        }
     }
 
     input:hover {
@@ -121,6 +144,10 @@
         padding: 15px 25px;
         width: 570px;
         cursor: pointer;
+
+        @media (max-width: 650px) {
+            width: 340px;
+        }
     }
 
     textarea:hover {
@@ -133,11 +160,20 @@
         border-radius: none;
         outline: solid 2px #FFFCF3;
     }
+
+    @media (max-width: 650px) {
+        width: 340px;
+        align-items: center;
+    }
 }
 
 .terms-and-conditions {
     display: flex;
     gap: 104px;
+
+    @media (max-width: 650px) {
+        display: unset;
+    }
 }
 
 .privacy-policy {
@@ -147,6 +183,10 @@
 
     &:hover {
         font-weight: bold !important;
+    }
+
+    @media (max-width: 650px) {
+        margin-top: -18px;
     }
 }
 
@@ -192,6 +232,10 @@
     &:hover .checkmark {
         background: url(../../assets/img/checkbox_orange.png) center/100% no-repeat;
     }
+
+    @media (max-width: 650px) {
+        margin-left: 0;
+    }
 }
 
 .please {
@@ -227,6 +271,11 @@
     &:hover {
         color: #FF9900;
     }
+
+    @media (max-width: 650px) {
+        font-size: 45px;
+        white-space: nowrap;
+    }
 }
 
 .copyright {
@@ -252,6 +301,7 @@
         align-items: unset;
         justify-content: center;
         align-items: center;
+        white-space: nowrap;
     }
 }
 
@@ -371,6 +421,12 @@
     background-color: black;
     padding: 0px 4px;
     font-size: 14px;
+    white-space: nowrap;
+
+    @media (max-width:650px) {
+        margin-top: 200px;
+        margin-right: 280px;
+    }
 }
 
 #your-email {
@@ -381,6 +437,12 @@
     background-color: black;
     padding: 0px 4px;
     font-size: 14px;
+    white-space: nowrap;
+
+    @media (max-width:650px) {
+        margin-top: 277px;
+        margin-right: 280px;
+    }
 }
 
 #your-message {
@@ -391,6 +453,12 @@
     background-color: black;
     padding: 0px 4px;
     font-size: 14px;
+    white-space: nowrap;
+
+    @media (max-width:650px) {
+        margin-top: 354px;
+        margin-right: 280px;
+    }
 }
 
 #name-required {

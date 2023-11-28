@@ -35,6 +35,10 @@
     @media (max-width: 900px) {
         font-size: 45px;
     }
+
+    @media (max-width: 440px) {
+        font-size: 36px;
+    }
 }
 
 .underneath-headline {
@@ -46,6 +50,8 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+    white-space: nowrap;
+
 
     img {
         width: 628px;
@@ -57,6 +63,10 @@
 
         @media (max-width: 900px) {
             width: 180px;
+        }
+
+        @media (max-width: 440px) {
+            width: 150px;
         }
     }
 

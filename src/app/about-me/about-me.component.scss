@@ -30,6 +30,10 @@
         @media (max-width: 700px) {
             font-size: 45px;
         }
+
+        @media (max-width: 440px) {
+            font-size: 36px;
+        }
     }
 
     span {
@@ -49,6 +53,11 @@
         @media (max-width: 700px) {
             height: 400px;
             width: 400px;
+        }
+
+        @media (max-width: 440px) {
+            height: 350px;
+            width: 350px;
         }
     }
 
@@ -87,8 +96,15 @@
     @media (max-width: 700px) {
         width: 380px;
         height: 380px;
-        left: 24px;
-        bottom: 380px;
+        left: 14px;
+        bottom: 392px;
+    }
+
+    @media (max-width: 440px) {
+        height: 330px;
+        width: 330px;
+        left: 14px;
+        bottom: 340px;    
     }
 }
 
@@ -119,6 +135,10 @@
 
     @media (max-width: 700px) {
         width: 400px;
+    }
+
+    @media (max-width: 440px) {
+        width: 350px;
     }
 }
 
@@ -158,4 +178,9 @@
         }
     }
 
+    @media (max-width: 440px) {
+        img {
+            margin-top: 160px;
+        }
+    }
 }
