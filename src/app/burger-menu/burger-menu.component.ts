@@ -8,11 +8,11 @@ import { timeout } from 'rxjs';
 })
 export class BurgerMenuComponent {
   burger_images = [
-    "../../assets/img/animations/burger-menu.png",
-    "../../assets/img/animations/burgermenu1.png",
-    "../../assets/img/animations/burgermenu2.png",
-    "../../assets/img/animations/burgermenu3.png",
-    "../../assets/img/animations/burgermenu4.png"
+    "./assets/img/animations/burger-menu.png",
+    "./assets/img/animations/burgermenu1.png",
+    "./assets/img/animations/burgermenu2.png",
+    "./assets/img/animations/burgermenu3.png",
+    "./assets/img/animations/burgermenu4.png"
   ];
 
   goTo(id: string) {
@@ -57,13 +57,13 @@ export class BurgerMenuComponent {
     let img = document.getElementById(image) as HTMLImageElement;
 
     setTimeout(() => {
-      img.src = "../../assets/img/animations/burgermenu-rectangle2.png";
+      img.src = "./assets/img/animations/burgermenu-rectangle2.png";
       superiorcontainer?.classList.remove('rectangle1');
       superiorcontainer?.classList.add('rectangle2');
     }, 50);
 
     setTimeout(() => {
-      img.src = "../../assets/img/animations/burgermenu-rectangle3.png";
+      img.src = "./assets/img/animations/burgermenu-rectangle3.png";
       superiorcontainer?.classList.remove('rectangle2');
       superiorcontainer?.classList.add('rectangle3');
     }, 100);
@@ -74,13 +74,13 @@ export class BurgerMenuComponent {
     let img = document.getElementById(image) as HTMLImageElement;
 
     setTimeout(() => {
-      img.src = "../../assets/img/animations/burgermenu-rectangle2.png";
+      img.src = "./assets/img/animations/burgermenu-rectangle2.png";
       superiorcontainer?.classList.add('rectangle2');
       superiorcontainer?.classList.remove('rectangle3');
     }, 50);
 
     setTimeout(() => {
-      img.src = "../../assets/img/animations/burgermenu-rectangle1.png";
+      img.src = "./assets/img/animations/burgermenu-rectangle1.png";
       superiorcontainer?.classList.add('rectangle1');
       superiorcontainer?.classList.remove('rectangle2');
     }, 100);

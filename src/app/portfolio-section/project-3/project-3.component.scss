@@ -22,6 +22,10 @@
         @media (max-width: 550px) {
             height: 220px;
         }
+
+        @media (max-width: 400px) {
+            height: 160px;
+        }
     }
 
     @media (max-width: 1650px) {
@@ -29,6 +33,11 @@
         align-items: center;
         padding-bottom: 400px;
     }
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
 }
 
 .project-number {
@@ -46,6 +55,11 @@
 
     @media (max-width: 550px) {
         margin-left: 250px;
+    }
+
+    @media (max-width: 400px) {
+        margin-left: 180px;
+        font-size: 24px !important;
     }
 }
 
@@ -137,6 +151,14 @@
             height: 28px;
             width: 28px;
         }
+
+        @media (max-width: 400px) {
+            position: relative;
+            left: 240px;
+            top: 56px;
+            height: 24px;
+            width: 24px;
+        }
     }
 
     @media (max-width: 1650px) {
@@ -159,6 +181,13 @@
         margin-left: 20px;
         margin-bottom: -2px;
     }
+
+    @media (max-width: 400px) {
+        height: 160px;
+        width: 250px;
+        margin-left: 19px;
+        margin-bottom: -6px;
+    }
 }
 
 .project-info {
@@ -179,6 +208,10 @@
         @media (max-width: 850px) {
             font-size: 28px;
         }
+
+        @media (max-width: 400px) {
+            font-size: 20px
+        }
     }
 
     h2 {
@@ -192,12 +225,20 @@
         @media (max-width: 850px) {
             font-size: 18px;
         }
+
+        @media (max-width: 400px) {
+            font-size: 16px;
+        }
     }
 
     span {
         font-size: 16px;
         font-weight: 400;
         font-family: 'Overpass', sans-serif;
+
+        @media (max-width:400px) {
+            font-size: 14px;
+        }
     }
 
     button {
@@ -227,6 +268,13 @@
             height: 35px;
             font-size: 16px;
         }
+
+        @media (max-width: 400px) {
+            width: 50px;
+            height: 35px;
+            font-size: 14px;
+            padding: 16px 44px;
+        }
     }
 
     button:hover {
@@ -240,8 +288,11 @@
         @media (max-width: 550px) {
             width: 140px;
         }
-    }
 
+        @media (max-width: 550px) {
+            width: 110px;
+        }
+    }
 
     a {
         text-decoration: none;
@@ -258,9 +309,8 @@
     @media (max-width: 550px) {
         width: 340px;
     }
-}
 
-.space-between {
-    display: flex;
-    justify-content: space-between;
+    @media (max-width: 550px) {
+        width: 250px;
+    }
 }

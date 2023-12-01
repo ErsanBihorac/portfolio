@@ -53,6 +53,10 @@
         @media (max-width: 650px) {
             text-align: center;
         }
+
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
     }
 
     h3 {
@@ -61,6 +65,11 @@
 
         @media (max-width: 650px) {
             text-align: center;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 16px;
+            width: 320px;
         }
     }
 
@@ -78,6 +87,11 @@
         background-color: black;
         cursor: pointer;
         margin-top: 20px;
+
+        @media (max-width: 400px) {
+            font-size: 20px;
+            padding: 16px 40px;
+        }
     }
 
     button:disabled {
@@ -89,6 +103,11 @@
         background-color: black;
         cursor: pointer;
         margin-top: 20px;
+
+        @media (max-width: 400px) {
+            font-size: 20px;
+            padding: 16px 40px;
+        }
     }
 
     @media (max-width: 1650px) {
@@ -123,6 +142,10 @@
         @media (max-width: 650px) {
             width: 340px;
         }
+
+        @media (max-width: 400px) {
+            width: 260px;
+        }
     }
 
     input:hover {
@@ -147,6 +170,10 @@
 
         @media (max-width: 650px) {
             width: 340px;
+        }
+
+        @media (max-width: 400px) {
+            width: 260px;
         }
     }
 
@@ -188,6 +215,10 @@
     @media (max-width: 650px) {
         margin-top: -18px;
     }
+
+    @media (max-width: 400px) {
+        margin-left: 72px;
+    }
 }
 
 .checkbox {
@@ -202,8 +233,11 @@
     span {
         font-size: 14px;
         font-weight: 400;
-    }
 
+        @media (max-width: 400px) {
+            font-size: 12px;
+        }
+    }
 
     input {
         display: none;
@@ -276,6 +310,10 @@
         font-size: 45px;
         white-space: nowrap;
     }
+
+    @media (max-width: 400px) {
+        font-size: 30px;
+    }
 }
 
 .copyright {
@@ -290,6 +328,10 @@
         font-family: 'Poppins', sans-serif;
         font-size: 23px;
         font-weight: 400;
+
+        @media (max-width: 400px) {
+            font-size: 16px;
+        }
     }
 
     img {
@@ -303,6 +345,7 @@
         align-items: center;
         white-space: nowrap;
     }
+
 }
 
 .professional-contacts {
@@ -336,6 +379,11 @@
         margin-top: 114px;
         margin-left: 68px;
     }
+
+    @media (max-width: 400px) {
+        margin-top: 108px;
+        margin-left: 48px;
+    }
 }
 
 .movefix {
@@ -352,9 +400,7 @@
     animation: slide-right 0.2s ease-in-out forwards;
 
     @media (max-width: 1300px) {
-        position: absolute;
-        margin-top: 150px;
-        margin-left: 450px;
+        display: none;
     }
 }
 
@@ -427,6 +473,11 @@
         margin-top: 200px;
         margin-right: 280px;
     }
+
+    @media (max-width:400px) {
+        margin-top: 114px;
+        margin-right: 190px;
+    }
 }
 
 #your-email {
@@ -443,6 +494,11 @@
         margin-top: 277px;
         margin-right: 280px;
     }
+
+    @media (max-width:400px) {
+        margin-top: 191px;
+        margin-right: 190px;
+    }
 }
 
 #your-message {
@@ -458,6 +514,11 @@
     @media (max-width:650px) {
         margin-top: 354px;
         margin-right: 280px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 268px;
+        margin-right: 170px;
     }
 }
 

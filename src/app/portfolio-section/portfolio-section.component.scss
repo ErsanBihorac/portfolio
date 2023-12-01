@@ -17,6 +17,10 @@
         @media (max-width: 700px) {
             font-size: 45px;
         }
+
+        @media (max-width: 400px) {
+            font-size: 30px;
+        }
     }
 
     h1:hover {
@@ -32,6 +36,10 @@
         @media (max-width: 700px) {
             width: unset;
             padding: 0px 30px;
+        }
+
+        @media (max-width: 700px) {
+            font-size: 16px;
         }
     }
 }
@@ -63,6 +71,14 @@
 
     @media (max-width: 520px) {
         margin-left: -150px;
+    }
+
+    @media (max-width: 400px) {
+        margin-left: -30px;
+
+        img {
+            height: 200px;
+        }
     }
 }
 

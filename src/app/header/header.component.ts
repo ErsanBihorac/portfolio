@@ -9,11 +9,11 @@ export class HeaderComponent {
   burgermenu_opened = false;
 
   burger_images = [
-    "../../assets/img/animations/burger-menu.png",
-    "../../assets/img/animations/burgermenu1.png",
-    "../../assets/img/animations/burgermenu2.png",
-    "../../assets/img/animations/burgermenu3.png",
-    "../../assets/img/animations/burgermenu4.png"
+    "./assets/img/animations/burger-menu.png",
+    "./assets/img/animations/burgermenu1.png",
+    "./assets/img/animations/burgermenu2.png",
+    "./assets/img/animations/burgermenu3.png",
+    "./assets/img/animations/burgermenu4.png"
   ];
 
   burgerMenu() {
