@@ -14,7 +14,7 @@
                     (change)="checkInputNameForContent()" id="input-name" type="text">
 
                 <input autocomplete="off" type="email" (focus)="emailUp()" (blur)="checkEmailDown()"
-                    (change)="checkInputEmailForContent()" id="input-email" type="text">
+                    (change)="checkInputEmailForContent()" id="input-email" type="email">
 
                 <textarea autocomplete="off" name="message" (focus)="messageUp()" (blur)="checkMessageDown()"
                     (change)="checkInputMessageForContent()" id="input-message" cols="30" rows="10"></textarea>
@@ -47,7 +47,7 @@
         <div id="message-required" class="please d-none">Your message is empty</div>
         <div id="please" class="please d-none">Please accept the privacy policy.</div>
 
-        <button form="form" type="submit" id="button" (click)="checkPolicyAndInputs()" disabled>Send message</button>
+        <button form="form" type="button" id="button" (click)="checkPolicyAndInputs()" disabled>Send message</button>
 
         <div id="your-name">Your name</div>
         <div id="your-email">Your email</div>

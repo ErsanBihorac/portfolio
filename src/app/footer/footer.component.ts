@@ -78,6 +78,8 @@ export class FooterComponent {
       this.checkInputMessageForContent();
     } else if (!this.checkbox_check) {
       please?.classList.remove('d-none');
+    } else {
+      this.checkContentFirstAndSendMail();
     }
   }
 
@@ -120,11 +122,11 @@ export class FooterComponent {
     let img_missing = document.getElementById('img-email-missing');
     let img_check = document.getElementById('img-email-check');
 
-    if (email.value.length == 0) {
+    if (email.value.length == 0 || !email.value.includes('@')) {
       required?.classList.remove('d-none');
       img_missing?.classList.remove('d-none');
       img_check?.classList.add('d-none');
-    } else if (email.value.length !== 0) {
+    } else if (email.value.length !== 0 || email.value.includes('@')) {
       required?.classList.add('d-none');
       img_missing?.classList.add('d-none');
       img_check?.classList.remove('d-none');
@@ -160,13 +162,19 @@ export class FooterComponent {
     fd.append('name', input_name.value);
     fd.append('message', input_message.value);
 
-    await fetch('http://ersan-bihorac.developerakademie.net/send_mail_folder/send_mail/send_mail.php',
+    await fetch('https://ersan-bihorac.com/angular-projects/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,
       }
     );
-
     //text anzeigen: nachricht gesendet
+  }
+
+  checkContentFirstAndSendMail() {
+    let form = document.getElementById('form') as HTMLFormElement;
+    if (this.message_available && this.email_available && this.name_available) {
+      form.submit();
+    }
   }
 }
