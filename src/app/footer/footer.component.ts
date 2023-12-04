@@ -162,7 +162,7 @@ export class FooterComponent {
     fd.append('name', input_name.value);
     fd.append('message', input_message.value);
 
-    await fetch('https://ersan-bihorac.com/angular-projects/send_mail/send_mail.php',
+    await fetch('https://ersan-bihorac.com/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,

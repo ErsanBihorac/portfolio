@@ -279,6 +279,16 @@
     position: absolute;
     margin-top: 474px;
     margin-right: 450px;
+
+    @media (max-width:650px) {
+        margin-top: 550px;
+        margin-right: 92px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 464px;
+        margin-right: 48px;
+    }
 }
 
 .footer-bottom {
@@ -524,50 +534,140 @@
 
 #name-required {
     margin-top: 168px;
+
+    @media (max-width:650px) {
+        margin-top: 234px;
+        margin-right: 266px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 148px;
+        margin-right: 190px;
+    }
 }
 
 #email-required {
     margin-top: 244px;
+
+    @media (max-width:650px) {
+        margin-top: 312px;
+        margin-right: 266px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 225px;
+        margin-right: 192px;
+    }
 }
 
 #message-required {
     margin-top: 422px;
+
+    @media (max-width:650px) {
+        margin-top: 486px;
+        margin-right: 266px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 402px;
+        margin-right: 184px;
+    }
 }
 
 .missing-name {
     position: absolute;
     margin-top: -364px;
     margin-left: 260px;
+
+    @media (max-width:650px) {
+        margin-top: -374px;
+        margin-left: 158px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: -374px;
+        margin-left: 114px;
+    }
 }
 
 .check-name {
     position: absolute;
     margin-top: -364px;
     margin-left: 260px;
+
+    @media (max-width:650px) {
+        margin-top: -374px;
+        margin-left: 158px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: -374px;
+        margin-left: 114px;
+    }
 }
 
 .missing-email {
     position: absolute;
     margin-top: -288px;
     margin-left: 260px;
+
+    @media (max-width:650px) {
+        margin-top: -298px;
+        margin-left: 158px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: -298px;
+        margin-left: 114px;
+    }
 }
 
 .check-email {
     position: absolute;
     margin-top: -288px;
     margin-left: 260px;
+
+    @media (max-width:650px) {
+        margin-top: -298px;
+        margin-left: 158px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: -298px;
+        margin-left: 114px;
+    }
 }
 
 .missing-message {
     position: absolute;
     margin-top: -210px;
     margin-left: 260px;
+
+    @media (max-width:650px) {
+        margin-top: -220px;
+        margin-left: 158px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: -220px;
+        margin-left: 115px;
+    }
 }
 
 .check-message {
     position: absolute;
     margin-top: -210px;
     margin-left: 260px;
+
+    @media (max-width:650px) {
+        margin-top: -220px;
+        margin-left: 158px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: -220px;
+        margin-left: 115px;
+    }
 }
 
 .move-up {
