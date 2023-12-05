@@ -165,7 +165,7 @@ export class FooterComponent {
     fd.append('message', input_message.value);
     fd.append('email', input_email.value);
 
-    await fetch('https://ersan-bihorac.com/send_mail/send_mail.php',
+    await fetch('https://ersan-bihorac.de/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd,
