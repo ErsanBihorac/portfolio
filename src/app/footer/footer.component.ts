@@ -152,15 +152,18 @@ export class FooterComponent {
     }
   }
 
-  async sendMail() {
+  async sendMail(event: any) {
+    event.preventDefault();
     let input_name = document.getElementById('input-name') as HTMLInputElement;
     let input_message = document.getElementById('input-message') as HTMLInputElement;
+    let input_email = document.getElementById('input-email') as HTMLInputElement;
 
     //animation anzeigen
 
     let fd = new FormData();
     fd.append('name', input_name.value);
     fd.append('message', input_message.value);
+    fd.append('email', input_email.value);
 
     await fetch('https://ersan-bihorac.com/send_mail/send_mail.php',
       {

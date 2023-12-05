@@ -8,7 +8,7 @@
     <div class="footer-middle">
         <h2>Want to discuss a new project?</h2>
         <h3> Say hello! let's discuss your ideas and make it happen</h3>
-        <form id="form" (submit)="sendMail()">
+        <form id="form" (submit)="sendMail($event)">
             <div class="inputs">
                 <input autocomplete="off" name="name" (focus)="nameUp()" (blur)="checkNameDown()"
                     (change)="checkInputNameForContent()" id="input-name" type="text">
