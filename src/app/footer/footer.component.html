@@ -5,59 +5,14 @@
         Say Hi!
     </div>
 
-    <div class="footer-middle">
-        <h2>Want to discuss a new project?</h2>
-        <h3> Say hello! let's discuss your ideas and make it happen</h3>
-        <form id="form" (submit)="sendMail($event)">
-            <div class="inputs">
-                <input autocomplete="off" name="name" (focus)="nameUp()" (blur)="checkNameDown()"
-                    (change)="checkInputNameForContent()" id="input-name" type="text">
-
-                <input autocomplete="off" type="email" (focus)="emailUp()" (blur)="checkEmailDown()"
-                    (change)="checkInputEmailForContent()" id="input-email" type="email">
-
-                <textarea autocomplete="off" name="message" (focus)="messageUp()" (blur)="checkMessageDown()"
-                    (change)="checkInputMessageForContent()" id="input-message" cols="30" rows="10"></textarea>
-            </div>
-        </form>
-
-        <label class="checkbox" for="checkbox">
-            <input type="checkbox" id="checkbox" (click)="onAcceptEnableButton()">
-            <div (click)="setCheck()" class="checkmark"></div>
-            <span class="terms-and-conditions">
-                <div>i've read the </div>
-                <span class="privacy-policy">privacy policy</span>
-                <div>and agree to processing of my data as outlined.</div>
-            </span>
-        </label>
-
-        <div>
-            <img id="img-name-missing" class="missing-name d-none" src="./assets/img/missing.png" alt="missing">
-            <img id="img-name-check" class="check-name d-none" src="./assets/img/check.png" alt="check">
-            <img id="img-email-missing" class="missing-email d-none" src="./assets/img/missing.png" alt="missing">
-            <img id="img-email-check" class="check-email d-none" src="./assets/img/check.png" alt="check">
-            <img id="img-message-missing" class="missing-message d-none" src="./assets/img/missing.png"
-                alt="missing">
-            <img id="img-message-check" class="check-message d-none" src="./assets/img/check.png" alt="check">
-        </div>
-
-        <div id="name-required" class="please d-none">Your name is required</div>
-        <div id="email-required" class="please d-none">Your email is required</div>
-        <div id="message-required" class="please d-none">Your message is empty</div>
-        <div id="please" class="please d-none">Please accept the privacy policy.</div>
-
-        <button form="form" type="button" id="button" (click)="checkPolicyAndInputs()" disabled>Send message</button>
-
-        <div id="your-name">Your name</div>
-        <div id="your-email">Your email</div>
-        <div id="your-message">Your message</div>
-    </div>
 
     <div class="footer-bottom">
         <div class="copyright">
             <a href="#main-page"><img src="./assets/img/logo-white.png" alt="logo"></a>
             <span>© Ersan Bihorac 2023</span>
         </div>
+
+        <app-form></app-form>
 
         <div>
             <div class="professional-contacts">

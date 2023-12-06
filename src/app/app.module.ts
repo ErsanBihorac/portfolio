@@ -14,6 +14,8 @@ import { Project3Component } from './portfolio-section/project-3/project-3.compo
 import { Project4Component } from './portfolio-section/project-4/project-4.component';
 import { FooterComponent } from './footer/footer.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './footer/form/form.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,14 @@ import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
     Project3Component,
     Project4Component,
     FooterComponent,
-    BurgerMenuComponent
+    BurgerMenuComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
