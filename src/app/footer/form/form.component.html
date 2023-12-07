@@ -9,13 +9,15 @@
             (blur)="onBlur('emailFieldFocused')">
         <textarea autocomplete="off" required cols="30" rows="10" name="message" #messageField
             (focus)="onFocus('messageFieldFocused')" (blur)="onBlur('messageFieldFocused')"></textarea>
-        <label class="label">
-            <input type="checkbox">
-            <span>
-                I've read the privacy policy and agree to the processing of my data as outlined.
-            </span>
-        </label>
-        <button>Send message</button>
+        <div class="label-container">
+            <input (change)="toggleButton()" id="checkbox" type="checkbox" name="privacy-policy">
+            <label for="checkbox">
+                <div>I've read the </div>
+                <span>privacy policy</span>
+                <div> and agree to the processing of my data as outlined.</div>
+            </label>
+        </div>
+        <button #button disabled [ngClass]="{'buttonActive': buttonChecked}">Send message</button>
     </form>
 
 

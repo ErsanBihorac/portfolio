@@ -13,10 +13,21 @@ export class FormComponent {
   @ViewChild('yourName') yourName!: ElementRef;
   @ViewChild('yourEmail') yourEmail!: ElementRef;
   @ViewChild('yourMessage') yourMessage!: ElementRef;
+  @ViewChild('button') button!: ElementRef;
   nameFieldModel: string = '';
   nameFieldFocused: boolean = false;
   emailFieldFocused: boolean = false;
   messageFieldFocused: boolean = false;
+  buttonChecked: boolean = false;
+
+  toggleButton() {
+    this.buttonChecked = !this.buttonChecked;
+    if (this.buttonChecked) {
+      this.button.nativeElement.disabled = false;
+    } else {
+      this.button.nativeElement.disabled = true;
+    }
+  }
 
   onFocus(field: any) {
     if (field == "nameFieldFocused") {
