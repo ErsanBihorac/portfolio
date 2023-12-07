@@ -139,6 +139,7 @@
 
 .footer-bottom {
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
 
     img {
@@ -308,20 +309,5 @@
 
     &:hover {
         transform: translateY(-10px);
-    }
-}
-
-.move-up {
-    animation: move-up 0.2s ease-in-out forwards;
-}
-
-@keyframes move-up {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(-24px);
     }
 }

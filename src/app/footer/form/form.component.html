@@ -1,6 +1,25 @@
-<form (submit)="sendMail()" ngNativeValidate #myForm>
-    <input required type="text" name="name" #nameField>
-    <input required type="email" name="email" #emailField>
-    <textarea required id="" cols="30" rows="10" name="message" #messageField></textarea>
-    <button>Senden</button>
-</form>
+<div class="middle">
+    <h2> Want to discuss a new project? </h2>
+    <h3> Say hello! let's discuss your ideas and make it happen </h3>
+
+    <form class="form-styling" (submit)="sendMail()" ngNativeValidate #myForm>
+        <input autocomplete="off" required type="text" name="name" #nameField (focus)="onFocus('nameFieldFocused')"
+            (blur)="onBlur('nameFieldFocused')">
+        <input autocomplete="off" required type="email" name="email" #emailField (focus)="onFocus('emailFieldFocused')"
+            (blur)="onBlur('emailFieldFocused')">
+        <textarea autocomplete="off" required cols="30" rows="10" name="message" #messageField
+            (focus)="onFocus('messageFieldFocused')" (blur)="onBlur('messageFieldFocused')"></textarea>
+        <label class="label">
+            <input type="checkbox">
+            <span>
+                I've read the privacy policy and agree to the processing of my data as outlined.
+            </span>
+        </label>
+        <button>Send message</button>
+    </form>
+
+
+    <div class="yourName" [ngClass]="{'moveUp': nameFieldFocused}">Your name</div>
+    <div class="yourEmail" [ngClass]="{'moveUp': emailFieldFocused}">Your email</div>
+    <div class="yourMessage" [ngClass]="{'moveUp': messageFieldFocused}">Your message</div>
+</div>
