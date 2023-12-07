@@ -14,8 +14,9 @@ import { Project3Component } from './portfolio-section/project-3/project-3.compo
 import { Project4Component } from './portfolio-section/project-4/project-4.component';
 import { FooterComponent } from './footer/footer.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './footer/form/form.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
