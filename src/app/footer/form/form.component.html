@@ -4,11 +4,12 @@
 
     <form class="form-styling" (submit)="sendMail()" ngNativeValidate #myForm>
         <input autocomplete="off" required type="text" name="name" #nameField (focus)="onFocus('nameFieldFocused')"
-            (blur)="onBlur('nameFieldFocused')">
+            (blur)="onBlur('nameFieldFocused'); checkValue('nameField')">
         <input autocomplete="off" required type="email" name="email" #emailField (focus)="onFocus('emailFieldFocused')"
-            (blur)="onBlur('emailFieldFocused')">
-        <textarea autocomplete="off" required cols="30" rows="10" name="message" #messageField
-            (focus)="onFocus('messageFieldFocused')" (blur)="onBlur('messageFieldFocused')"></textarea>
+            (blur)="onBlur('emailFieldFocused'); checkValue('emailField')">
+        <textarea [(ngModel)]="textAreaValue" autocomplete="off" required cols="30" rows="10" name="message" #messageField [value]=""
+            (focus)="onFocus('messageFieldFocused')" (blur)="onBlur('messageFieldFocused'); checkValue('messageField')">
+        </textarea>
         <div class="label-container">
             <input (change)="toggleButton()" id="checkbox" type="checkbox" name="privacy-policy">
             <label for="checkbox">
@@ -24,4 +25,17 @@
     <div class="yourName" [ngClass]="{'moveUp': nameFieldFocused}">Your name</div>
     <div class="yourEmail" [ngClass]="{'moveUp': emailFieldFocused}">Your email</div>
     <div class="yourMessage" [ngClass]="{'moveUp': messageFieldFocused}">Your message</div>
+
+    <div [ngStyle]="{'display': nameField.value.trim() === '' && nameFieldUsed ? 'unset' : 'none'}" class="required name-positioning">Your name is required</div>
+    <div [ngStyle]="{'display': emailFieldUsed && emailField.value.trim() === '' ? 'unset' : 'none'}" class="required email-positioning">Your email is required</div>
+    <div [ngStyle]="{'display': messageField.value.trim() === '' && messageFieldUsed ? 'unset' : 'none'}" class="required message-positioning">Your message is required</div>
+
+    <img [ngStyle]="{'display': nameField.value.trim().length > 0 && nameFieldUsed ? 'unset' : 'none'}" src="../../../assets/img/check.png" class="img-name-positioning">
+    <img [ngStyle]="{'display': nameField.value.trim() === '' && nameFieldUsed ? 'unset' : 'none'}" src="../../../assets/img/missing.png" class="img-name-positioning">
+
+    <img [ngStyle]="{'display': emailField.value.trim().length > 0 && emailFieldUsed && (emailField.value.includes('@')) ? 'unset' : 'none'}" src="../../../assets/img/check.png" class="img-email-positioning">
+    <img [ngStyle]="{'display': emailFieldUsed && emailField.value.trim() === '' ? 'unset' : 'none'}" src="../../../assets/img/missing.png" class="img-email-positioning">
+
+    <img [ngStyle]="{'display': messageField.value.trim().length > 0 && messageFieldUsed ? 'unset' : 'none'}" src="../../../assets/img/check.png" class="img-message-positioning">
+    <img [ngStyle]="{'display': messageField.value.trim() === '' && messageFieldUsed ? 'unset' : 'none'}" src="../../../assets/img/missing.png" class="img-message-positioning">
 </div>

@@ -18,7 +18,11 @@ export class FormComponent {
   nameFieldFocused: boolean = false;
   emailFieldFocused: boolean = false;
   messageFieldFocused: boolean = false;
+  nameFieldUsed: boolean = false;
+  emailFieldUsed: boolean = false;
+  messageFieldUsed: boolean = false;
   buttonChecked: boolean = false;
+  textAreaValue: string = '';
 
   toggleButton() {
     this.buttonChecked = !this.buttonChecked;
@@ -26,6 +30,17 @@ export class FormComponent {
       this.button.nativeElement.disabled = false;
     } else {
       this.button.nativeElement.disabled = true;
+    }
+  }
+
+  checkValue(field: string) {
+    if (field == "nameField") {
+      this.nameFieldUsed = true;
+      console.log('used')
+    } else if (field == "emailField") {
+      this.emailFieldUsed = true;
+    } else if (field == "messageField") {
+      this.messageFieldUsed = true;
     }
   }
 

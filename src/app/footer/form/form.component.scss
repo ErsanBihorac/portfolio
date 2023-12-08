@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 
     button {
         width: 270px;
@@ -187,14 +187,51 @@
     }
 }
 
+.required {
+    color: #E61C40;
+    font-size: 12px;
+    position: absolute;
+}
+
+.name-positioning {
+    margin-top: 180px;
+    margin-right: 500px;
+}
+
+.email-positioning {
+    margin-top: 258px;
+    margin-right: 500px;
+}
+
+.message-positioning {
+    margin-top: 472px;
+    margin-right: 484px;
+}
+
+.img-name-positioning {
+    position: absolute;
+    margin-top: 138px;
+    margin-right: -540px;
+}
+.img-email-positioning {
+    position: absolute;
+    margin-top: 216px;
+    margin-right: -540px;
+}
+.img-message-positioning {
+    position: absolute;
+    margin-top: 290px;
+    margin-right: -540px;
+}
+
 .yourName {
     position: absolute;
-    margin-top: 144px;
+    margin-top: 143px;
     margin-right: 500px;
     pointer-events: none;
     background-color: black;
     padding: 0px 4px;
-    font-size: 14px;
+    font-size: 16px;
     white-space: nowrap;
 
     @media (max-width:650px) {
@@ -206,17 +243,16 @@
         margin-top: 114px;
         margin-right: 190px;
     }
-    
 }
 
 .yourEmail {
     position: absolute;
-    margin-top: 212px;
+    margin-top: 220px;
     margin-right: 500px;
     pointer-events: none;
     background-color: black;
     padding: 0px 4px;
-    font-size: 14px;
+    font-size: 16px;
     white-space: nowrap;
 
     @media (max-width:650px) {
@@ -232,12 +268,12 @@
 
 .yourMessage {
     position: absolute;
-    margin-top: 280px;
+    margin-top: 298px;
     margin-right: 480px;
     pointer-events: none;
     background-color: black;
     padding: 0px 4px;
-    font-size: 14px;
+    font-size: 16px;
     white-space: nowrap;
 
     @media (max-width:650px) {
