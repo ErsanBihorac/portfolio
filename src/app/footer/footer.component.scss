@@ -25,10 +25,7 @@
     @media (max-width: 1300px) {
         align-items: center;
         padding-top: 300px;
-    }
-
-    @media (max-height: 800px) {
-        padding-bottom: 30vh;
+        padding-bottom: 300px;
     }
 
     @media (max-height: 700px) {
@@ -148,7 +145,8 @@
     }
 
     @media (max-width: 1300px) {
-        flex-direction: column-reverse;
+        align-items: center;
+        flex-direction: column;
         padding-top: 40px;
         gap: 30px;
     }
@@ -201,8 +199,13 @@
         justify-content: center;
         align-items: center;
         white-space: nowrap;
+        position: absolute;
+        margin-top: 720px;
     }
 
+    @media (max-width: 650px) {
+        margin-top: 776px;
+    }
 }
 
 .professional-contacts {
@@ -234,7 +237,7 @@
     @media (max-width: 1300px) {
         position: absolute;
         margin-top: 114px;
-        margin-left: 68px;
+        margin-left: 54px;
     }
 
     @media (max-width: 400px) {

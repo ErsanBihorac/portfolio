@@ -9,12 +9,32 @@
         font-size: 32px;
         margin-block-start: 0;
         margin-block-end: 0;
+
+        @media (max-width: 650px) {
+            font-size: 26px;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
     }
 
     h3 {
         font-size: 23px;
         margin-block-start: 0;
         margin-block-end: 0;
+
+        @media (max-width: 650px) {
+            font-size: 20px;
+            width: 370px;
+            text-align: center;
+        }
+
+        @media (max-width: 400px) {
+            width: 300px;
+            font-size: 14px;
+        }
     }
 }
 
@@ -145,6 +165,10 @@
         height: 18px;
         background-image: url("../../../assets/img/checkbox_empty.png");
         background-size: cover;
+
+        @media (max-width:650px) {
+            top: 18px;
+        }
     }
 
     input[type="checkbox"]:hover+label:hover::before {
@@ -169,6 +193,29 @@
 
     span {
         color: #FF9900;
+    }
+
+    @media (max-width: 400px) {
+        width: 300px;
+        font-size: 12px;
+    }
+}
+
+.column650 {
+    @media (max-width: 650px) {
+        flex-direction: column;
+    }
+}
+
+.gap650 {
+    display: flex;
+    gap: 10px;
+
+}
+
+.nowrap {
+    @media (max-width: 650px) {
+        white-space: nowrap;
     }
 }
 
@@ -196,34 +243,94 @@
 .name-positioning {
     margin-top: 180px;
     margin-right: 500px;
+
+    @media (max-width:650px) {
+        margin-top: 196px;
+        margin-right: 270px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 171px;
+        margin-right: 188px;
+    }
 }
 
 .email-positioning {
     margin-top: 258px;
     margin-right: 500px;
+
+    @media (max-width:650px) {
+        margin-top: 274px;
+        margin-right: 270px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 248px;
+        margin-right: 190px;
+    }
 }
 
 .message-positioning {
     margin-top: 472px;
     margin-right: 484px;
+
+    @media (max-width:650px) {
+        margin-top: 486px;
+        margin-right: 250px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 460px;
+        margin-right: 174px;
+    }
 }
 
 .img-name-positioning {
     position: absolute;
     margin-top: 138px;
     margin-right: -540px;
+
+    @media (max-width:650px) {
+        margin-top: 154px;
+        margin-right: -302px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 128px;
+        margin-right: -242px;
+    }
 }
 
 .img-email-positioning {
     position: absolute;
     margin-top: 216px;
     margin-right: -540px;
+
+    @media (max-width:650px) {
+        margin-top: 230px;
+        margin-right: -300px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 206px;
+        margin-right: -240px;
+    }
 }
 
 .img-message-positioning {
     position: absolute;
     margin-top: 290px;
     margin-right: -540px;
+
+    @media (max-width:650px) {
+        margin-top: 316px;
+        margin-right: -300px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 284px;
+        margin-right: -240px;
+    }
 }
 
 .yourName {
@@ -237,12 +344,12 @@
     white-space: nowrap;
 
     @media (max-width:650px) {
-        margin-top: 200px;
+        margin-top: 160px;
         margin-right: 280px;
     }
 
     @media (max-width:400px) {
-        margin-top: 114px;
+        margin-top: 134px;
         margin-right: 190px;
     }
 }
@@ -258,12 +365,12 @@
     white-space: nowrap;
 
     @media (max-width:650px) {
-        margin-top: 277px;
+        margin-top: 236px;
         margin-right: 280px;
     }
 
     @media (max-width:400px) {
-        margin-top: 191px;
+        margin-top: 210px;
         margin-right: 190px;
     }
 }
@@ -279,12 +386,12 @@
     white-space: nowrap;
 
     @media (max-width:650px) {
-        margin-top: 354px;
-        margin-right: 280px;
+        margin-top: 314px;
+        margin-right: 254px;
     }
 
     @media (max-width:400px) {
-        margin-top: 268px;
+        margin-top: 290px;
         margin-right: 170px;
     }
 }
