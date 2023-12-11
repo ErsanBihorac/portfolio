@@ -1,0 +1,102 @@
+.portfolio-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 100px;
+    font-family: 'Syne', sans-serif;
+
+    h1 {
+        font-size: 78px;
+        font-weight: 800;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        z-index: 1;
+
+        @media (max-width: 700px) {
+            font-size: 45px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 30px;
+        }
+    }
+
+    h1:hover {
+        color: #FF9900;
+    }
+
+    span {
+        width: 500px;
+        font-size: 23px;
+        font-weight: 400;
+        font-family: 'Overpass', sans-serif;
+
+        @media (max-width: 700px) {
+            width: unset;
+            padding: 0px 30px;
+        }
+
+        @media (max-width: 700px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.arrow-box {
+    overflow: hidden;
+    max-width: 100vw;
+    margin: 100px 0px;
+    position: relative;
+    bottom: 100px;
+
+    @media (max-width: 1500px) {
+        position: relative;
+        bottom: 200px;
+    }
+
+    @media (max-width: 1100px) {
+        overflow: unset;
+        position: relative;
+        bottom: 200px;
+        right: 400px;
+    }
+
+    @media (max-width: 770px) {
+        img {
+            height: 250px;
+        }
+    }
+
+    @media (max-width: 520px) {
+        margin-left: -150px;
+    }
+
+    @media (max-width: 400px) {
+        margin-left: -30px;
+
+        img {
+            height: 200px;
+        }
+    }
+}
+
+.move-down {
+    animation: arrow-move-down 0.2s ease-in-out forwards;
+}
+
+@keyframes arrow-move-down {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-100px, 100px);
+    }
+}
+
+.syne {
+    font-family: 'Syne', sans-serif;
+}

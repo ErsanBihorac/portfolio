@@ -1,0 +1,33 @@
+<div class="footer-page" id="footer">
+    <a href="#main-page"><img class="arrow-up" src="./assets/img/arrow-up2.png" alt="arrow-up"></a>
+
+    <div class="say-hi">
+        Say Hi!
+    </div>
+
+
+    <div class="footer-bottom">
+        <div class="copyright">
+            <a href="#main-page"><img src="./assets/img/logo-white.png" alt="logo"></a>
+            <span>© Ersan Bihorac 2023</span>
+        </div>
+
+        <app-form></app-form>
+
+        <div>
+            <div class="professional-contacts">
+                <a href="https://github.com/ErsanBihorac">
+                    <img class="icon-animation" src="./assets/img/github-button.png" alt="github">
+                </a>
+                <img class="icon-animation" src="./assets/img/email-button.png" alt="email">
+                <a href="https://www.linkedin.com/in/ersan-bihorac-134743299/">
+                    <img class="icon-animation" src="./assets/img/linkedin-button.png" alt="linkedin">
+                </a>
+            </div>
+            <div class="movefix">
+                <a routerLink="legal-notice" (mouseover)="displayLine()" (mouseout)="hideLine()" class="legal-notice">Legal notice</a>
+                <div id="line" class="legal-notice-line d-none"></div>
+            </div>
+        </div>
+    </div>
+</div>

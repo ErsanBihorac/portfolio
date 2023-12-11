@@ -1,0 +1,26 @@
+<div id="about-me-page" class="about-me-page">
+
+    <div class="about-me">
+        <div class="about-me-text">
+            <h1 class="orange">About me</h1>
+            <span>I am a Front-end developer based in Duisburg, Germany. I enjoy helping designers and companies bring
+                their ideas into real life. I am looking forward to continuing my developer career with a job in a
+                junior web developer position</span>
+            <span>If you think i'd be a good match for your projects, contact me!</span>
+            <div class="button-design">
+                <a href="#footer"><button>Let's talk</button></a>
+            </div>
+        </div>
+        <div>
+            <img (mouseover)="displayFrame()" (mouseout)="hideFrame()" src="./assets/img/about-me-img.png"
+                alt="Image of myself">
+
+            <div (mouseover)="displayFrame()" (mouseout)="hideFrame()" id="image-frame" class="image-frame"></div>
+        </div>
+    </div>
+
+    <div class="arrow-box">
+        <img (mouseover)="addArrowAnimation()" id="arrow-left" src="./assets/img/arrow-left.png" alt="arrow-left">
+    </div>
+
+</div>

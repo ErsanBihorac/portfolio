@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-color: #FFFCF3;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 500px) {
+        overflow-x: hidden;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.d-none {
+    display: none !important;
+}
+
+app-root {
+    @media (max-width: 1650px) {
+        width: 100%;
+        overflow: hidden !important;
+    }
+}
