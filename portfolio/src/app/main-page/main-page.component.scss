@@ -25,7 +25,6 @@
 }
 
 .headline {
-
     font-size: 128px;
     font-weight: 800;
     text-align: center;
@@ -58,7 +57,6 @@
     align-items: center;
     gap: 16px;
     white-space: nowrap;
-
 
     img {
         width: 628px;
@@ -174,11 +172,15 @@
 
 .headline-email {
     rotate: 270deg;
-    margin-left: -120px;
+    margin-left: -60px;
     color: black;
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
+
+    @media(max-width: 1650px) {
+        margin-left: -120px;
+    }
 
     @media (max-width: 600px) {
         margin-left: -84px;

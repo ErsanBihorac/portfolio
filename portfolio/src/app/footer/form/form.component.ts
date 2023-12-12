@@ -64,16 +64,37 @@ export class FormComponent {
     }
   }
 
+  resetForm() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
+
+    this.nameFieldFocused = false;
+    this.emailFieldFocused = false;
+    this.messageFieldFocused = false;
+
+    this.nameFieldUsed = false;
+    this.emailFieldUsed = false;
+    this.messageFieldUsed = false;
+
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+  }
+
   async sendMail() {
     // action = "https://ersan-bihorac.de/send_mail/send_mail.php"
-    console.log(this.myForm);
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
-    //Animation anzeigen
+    //eventuell Animation anzeigen
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('email', emailField.value);
@@ -85,9 +106,7 @@ export class FormComponent {
         body: fd
       }
     )
-    //text anzeigen= Nachricht gesendet
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
+    //eventuell text anzeigen= Nachricht gesendet
+    this.resetForm();
   }
 }
