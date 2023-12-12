@@ -3,14 +3,17 @@
     <h3> Say hello! let's discuss your ideas and make it happen </h3>
 
     <form class="form-styling" (submit)="sendMail()" ngNativeValidate #myForm>
-        <input autocomplete="off" required type="text" name="name" #nameField (focus)="onFocus('nameFieldFocused')"
+        <div class="move-fix">
+            <input autocomplete="off" required type="text" name="name" #nameField (focus)="onFocus('nameFieldFocused')"
             (blur)="onBlur('nameFieldFocused'); checkValue('nameField')">
+        </div>
         <input autocomplete="off" required type="email" name="email" #emailField (focus)="onFocus('emailFieldFocused')"
             (blur)="onBlur('emailFieldFocused'); checkValue('emailField')">
         <textarea [(ngModel)]="textAreaValue" autocomplete="off" required cols="30" rows="10" name="message"
             #messageField [value]="" (focus)="onFocus('messageFieldFocused')"
             (blur)="onBlur('messageFieldFocused'); checkValue('messageField')">
         </textarea>
+
         <div class="label-container">
             <input (change)="toggleButton()" id="checkbox" type="checkbox" name="privacy-policy">
             <label for="checkbox" class="column650">

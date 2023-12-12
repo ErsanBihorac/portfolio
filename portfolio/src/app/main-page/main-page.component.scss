@@ -2,14 +2,16 @@
     display: flex;
     flex-direction: column;
     background-color: #FFFCF3;
-    justify-content: space-evenly;
+    justify-content: center;
     min-height: 100vh;
-    gap: 200px;
+    gap: 60px;
     padding: 0px 100px;
     font-family: 'Overpass', sans-serif;
+    margin-top: -100px;
 
     @media (max-width: 1650px) {
         width: auto;
+        margin-top: unset;
     }
 
     @media (max-width: 900px) {
@@ -23,7 +25,7 @@
 }
 
 .headline {
-    padding-top: 150px;
+
     font-size: 128px;
     font-weight: 800;
     text-align: center;
@@ -100,7 +102,7 @@
 
     img {
         position: relative;
-        left: 620px;
+        left: 640px;
         bottom: 200px;
         animation: arrow-down1 4s linear infinite;
         background-image: none;
@@ -176,6 +178,7 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+    font-size: 20px;
 
     @media (max-width: 600px) {
         margin-left: -84px;
