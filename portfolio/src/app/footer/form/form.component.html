@@ -3,16 +3,20 @@
     <h3> Say hello! let's discuss your ideas and make it happen </h3>
 
     <form class="form-styling" (submit)="sendMail()" ngNativeValidate #myForm>
-        <div class="move-fix">
+        <div class="move-fix-input">
             <input autocomplete="off" required type="text" name="name" #nameField (focus)="onFocus('nameFieldFocused')"
-            (blur)="onBlur('nameFieldFocused'); checkValue('nameField')">
+                (blur)="onBlur('nameFieldFocused'); checkValue('nameField')">
         </div>
-        <input autocomplete="off" required type="email" name="email" #emailField (focus)="onFocus('emailFieldFocused')"
-            (blur)="onBlur('emailFieldFocused'); checkValue('emailField')">
-        <textarea [(ngModel)]="textAreaValue" autocomplete="off" required cols="30" rows="10" name="message"
-            #messageField [value]="" (focus)="onFocus('messageFieldFocused')"
-            (blur)="onBlur('messageFieldFocused'); checkValue('messageField')">
-        </textarea>
+        <div class="move-fix-input">
+            <input autocomplete="off" required type="email" name="email" #emailField
+                (focus)="onFocus('emailFieldFocused')" (blur)="onBlur('emailFieldFocused'); checkValue('emailField')">
+        </div>
+        <div class="move-fix-textarea">
+            <textarea [(ngModel)]="textAreaValue" autocomplete="off" required cols="30" rows="10" name="message"
+                #messageField [value]="" (focus)="onFocus('messageFieldFocused')"
+                (blur)="onBlur('messageFieldFocused'); checkValue('messageField')">
+            </textarea>
+        </div>
 
         <div class="label-container">
             <input (change)="toggleButton()" id="checkbox" type="checkbox" name="privacy-policy">

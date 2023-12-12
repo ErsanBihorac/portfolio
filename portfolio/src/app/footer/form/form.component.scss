@@ -38,6 +38,14 @@
     }
 }
 
+.move-fix-input {
+    height: 46px;
+}
+
+.move-fix-textarea {
+    height: 188px;
+}
+
 .buttonActive {
     opacity: 100% !important;
 }
@@ -160,7 +168,7 @@
         content: "";
         position: absolute;
         left: -30px;
-        top: 0;
+        top: 2px;
         width: 18px;
         height: 18px;
         background-image: url("../../../assets/img/checkbox_empty.png");
