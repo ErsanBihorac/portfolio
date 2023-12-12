@@ -33,6 +33,7 @@
         <button #button disabled [ngClass]="{'buttonActive': buttonChecked}">Send message</button>
     </form>
 
+    <div id="success" class="success animation-success d-none">Message was sent successfully!</div>
 
     <div class="yourName" [ngClass]="{'moveUp': nameFieldFocused}">Your name</div>
     <div class="yourEmail" [ngClass]="{'moveUp': emailFieldFocused}">Your email</div>

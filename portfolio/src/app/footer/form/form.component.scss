@@ -38,6 +38,53 @@
     }
 }
 
+.success {
+    color: black;
+    background-color: #FFFCF3;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: absolute;
+    margin-top: 640px;
+    z-index: 3;
+    pointer-events: none;
+
+    @media (max-width:1650px) {
+        margin-top: 566px;
+    }
+
+    @media (max-width:650px) {
+        margin-top: 620px;
+    }
+
+    @media (max-width:400px) {
+        margin-top: 594px;
+    }
+}
+
+.animation-success {
+    animation: success 4s forwards;
+}
+
+@keyframes success {
+    from {
+        transform: translateY(500px);
+    }
+
+    10% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .move-fix-input {
     height: 46px;
 }

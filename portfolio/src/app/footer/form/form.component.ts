@@ -14,6 +14,7 @@ export class FormComponent {
   @ViewChild('yourEmail') yourEmail!: ElementRef;
   @ViewChild('yourMessage') yourMessage!: ElementRef;
   @ViewChild('button') button!: ElementRef;
+  @ViewChild('checkbox') checkbox!: ElementRef;
   nameFieldModel: string = '';
   nameFieldFocused: boolean = false;
   emailFieldFocused: boolean = false;
@@ -36,7 +37,6 @@ export class FormComponent {
   checkValue(field: string) {
     if (field == "nameField") {
       this.nameFieldUsed = true;
-      console.log('used')
     } else if (field == "emailField") {
       this.emailFieldUsed = true;
     } else if (field == "messageField") {
@@ -68,6 +68,7 @@ export class FormComponent {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
+    let checkbox = this.checkbox.nativeElement;
 
     nameField.value = '';
     emailField.value = '';
@@ -84,6 +85,17 @@ export class FormComponent {
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
+
+    checkbox.checked = false;
+    this.toggleButton();
+  }
+
+  msgAnimation() {
+    let success = document.getElementById('success');
+    success?.classList.remove('d-none');
+    setTimeout(() => {
+      success?.classList.add('d-none');
+    }, 4000)
   }
 
   async sendMail() {
@@ -106,7 +118,7 @@ export class FormComponent {
         body: fd
       }
     )
-    //eventuell text anzeigen= Nachricht gesendet
+    this.msgAnimation();
     this.resetForm();
   }
 }
