@@ -1,9 +1,16 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Fireflies } from '../fireflies/fireflies';
 import { CommonModule } from '@angular/common';
 import { GlowingBtn } from '../glowing-btn/glowing-btn';
 import { Button } from '../../interfaces/button.interface';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-introduction',
@@ -11,12 +18,14 @@ import { Router } from "@angular/router";
   templateUrl: './introduction.html',
   styleUrl: './scss/introduction.scss',
 })
-export class Introduction {
+export class Introduction implements AfterViewInit {
   @Output() scrollNext = new EventEmitter<void>();
+  @ViewChild('introSection') introSection!: ElementRef;
+  wasViewed = false;
 
   linkedin: string = 'https://www.linkedin.com/in/ersan-bihorac/';
   github: string = 'https://github.com/ErsanBihorac';
-  mail: string = 'contact@ebihorac.de';
+  mail: string = 'ersan.development@gmail.com';
 
   glowingBtnContact: Button = {
     text: 'Get Started Now',
@@ -41,11 +50,11 @@ export class Introduction {
   }
 
   navigateToContact() {
-    this.router.navigate(['/contact'])
+    this.router.navigate(['/contact']);
   }
 
   navigateToProjects() {
-    this.router.navigate(['/projects'])
+    this.router.navigate(['/projects']);
   }
 
   openMail() {
@@ -60,5 +69,16 @@ export class Introduction {
       top: window.innerHeight,
       behavior: 'smooth',
     });
+  }
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        this.wasViewed = true;
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(this.introSection.nativeElement);
   }
 }

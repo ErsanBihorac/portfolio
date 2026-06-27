@@ -11,6 +11,8 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class Navigation {
   @Output() scrollToQNA = new EventEmitter<void>();
+  @Output() scrollToProjects = new EventEmitter<void>();
+  @Output() scrollToIntro = new EventEmitter<void>();
   navigationOpen: boolean = false;
   animationsEnabled: boolean = false;
 
@@ -42,10 +44,25 @@ export class Navigation {
 
   navigateToQna() {
     if (!this.isHomePage()) {
-      this.router.navigate(['/']).then(() => {
-      });
+      this.router.navigate(['/']).then(() => {});
     } else {
       this.scrollToQNA.emit();
+    }
+  }
+
+  navigateToProjects() {
+    if (!this.isHomePage()) {
+      this.router.navigate(['/']).then(() => {});
+    } else {
+      this.scrollToProjects.emit();
+    }
+  }
+
+  navigateToIntro() {
+    if (!this.isHomePage()) {
+      this.router.navigate(['/']).then(() => {});
+    } else {
+      this.scrollToIntro.emit();
     }
   }
 }

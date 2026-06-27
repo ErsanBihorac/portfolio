@@ -31,13 +31,6 @@ export const appRoutes: Route[] = [
     },
   },
   {
-    path: 'projects',
-    loadComponent: async () => {
-      const module = await import('./components/projects-page/projects-page');
-      return module.ProjectsPage;
-    },
-  },
-  {
     path: '**',
     loadComponent: async () => {
       const module = await import('./components/wild-card-page/wild-card-page');

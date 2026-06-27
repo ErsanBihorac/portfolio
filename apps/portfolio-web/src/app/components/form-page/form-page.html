@@ -28,7 +28,9 @@
           type="text"
           placeholder="Your Name"
         />
-        <span *ngIf="nameInput.invalid && nameInput.touched" class="form__error-message"
+        <span
+          *ngIf="nameInput.invalid && nameInput.touched"
+          class="form__error-message"
           >name is required</span
         >
       </div>
@@ -44,7 +46,9 @@
           type="email"
           placeholder="Your Email"
         />
-        <span *ngIf="emailInput.invalid && emailInput.touched" class="form__error-message"
+        <span
+          *ngIf="emailInput.invalid && emailInput.touched"
+          class="form__error-message"
           >valid email is required</span
         >
       </div>
@@ -73,7 +77,9 @@
         type="text"
         placeholder="Your Message"
       ></textarea>
-      <span *ngIf="messageInput.invalid && messageInput.touched" class="form__error-message"
+      <span
+        *ngIf="messageInput.invalid && messageInput.touched"
+        class="form__error-message"
         >message is required</span
       >
     </div>
@@ -90,8 +96,12 @@
     </div>
 
     <div class="form__subhead">
-      <span class="form__subhead-notice">(We reach out to you within 24hrs)</span>
-      <span (click)="this.openMail()" class="form__subhead-email">contact@ebihorac.de</span>
+      <span class="form__subhead-notice"
+        >(We reach out to you within 24hrs)</span
+      >
+      <span (click)="this.openMail()" class="form__subhead-email"
+        >ersan.development@gmail.com</span
+      >
     </div>
   </form>
 </section>

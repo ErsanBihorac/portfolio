@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card__unfolded">
+    <span class="card__question">{{ project.title }}</span>
+
+    <span class="card__answer answer-animation" [class.active]="true">
+      {{ project.description }}
+    </span>
+  </div>
+
+  <div class="card__btn">
+    <app-glowing-btn
+      (click)="navigateToProject(project.projectUrl)"
+      class="button-animation"
+      [button]="glowingBtn"
+      bgColor="#000000"
+      size="medium"
+      height="36px"
+      width="160px"
+    ></app-glowing-btn>
+  </div>
+</div>

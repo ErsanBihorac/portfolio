@@ -1,0 +1,37 @@
+@use './../../../styles/animations.mixins' as mixin;
+
+@for $i from 1 through 3 {
+  .title-animation-#{$i} {
+    @include mixin.fade(
+      fadeIn,
+      900ms,
+      1000ms + ($i - 1) * 100ms
+    );
+  }
+}
+
+@for $i from 1 through 3 {
+  .description-animation-#{$i} {
+    @include mixin.fade(
+      fadeIn,
+      900ms,
+      1100ms + ($i - 1) * 100ms
+    );
+  }
+}
+
+.button-animation {
+    @include mixin.fade(
+        fadeIn,
+        900ms,
+        1000ms
+    );
+}
+
+.cards-animation {
+    @include mixin.fade(
+        fadeInUpStrong,
+        400ms,
+        1000ms
+    );
+}

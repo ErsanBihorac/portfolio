@@ -5,10 +5,19 @@ import { QuestionsAndAnswers } from '../questions-and-answers/questions-and-answ
 import { Contact } from '../contact/contact';
 import { MovingBanner } from '../moving-banner/moving-banner';
 import { Footer } from '../footer/footer';
+import { Projects } from '../projects/projects';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [Navigation, Introduction, QuestionsAndAnswers, Contact, MovingBanner, Footer],
+  imports: [
+    Navigation,
+    Introduction,
+    QuestionsAndAnswers,
+    Contact,
+    MovingBanner,
+    Footer,
+    Projects,
+  ],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
 })
@@ -104,10 +113,33 @@ export class LandingPage {
   ];
 
   @ViewChild('qnaSection', { read: ElementRef }) qnaSection!: ElementRef;
+  @ViewChild('projectsSection', { read: ElementRef })
+  projectsSection!: ElementRef;
+  @ViewChild('introSection', { read: ElementRef }) introSection!: ElementRef;
 
-  handleChildEvent() {
+  scrollToQna() {
     if (this.qnaSection) {
-      this.qnaSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.qnaSection.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
+
+  scrollToProjects() {
+    if (this.projectsSection) {
+      this.projectsSection.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
+  scrollToIntro() {
+    if (this.introSection) {
+      this.introSection.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     }
   }
 }

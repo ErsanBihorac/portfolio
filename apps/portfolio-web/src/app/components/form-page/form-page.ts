@@ -6,8 +6,8 @@ import { Contact } from '../contact/contact';
 import { Footer } from '../footer/footer';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MailService } from '../../services/mail-service';
 import { firstValueFrom } from 'rxjs';
+import { MailService } from '../../services/mail-service';
 
 @Component({
   selector: 'app-form-page',
@@ -26,8 +26,8 @@ export class FormPage {
       path: 'm216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z',
     },
   };
-  
-  mail: string = 'contact@ebihorac.de';
+
+  mail: string = 'ersan.development@gmail.com';
   buttonBgColor: string = '';
   name: string = '';
   email: string = '';
@@ -45,7 +45,12 @@ export class FormPage {
   async sendRequest(form: NgForm) {
     try {
       const response: any = await firstValueFrom(
-        this.mailService.sendMail(this.name, this.email, this.message, this.website)
+        this.mailService.sendMail(
+          this.name,
+          this.email,
+          this.message,
+          this.website,
+        ),
       );
 
       if (response.success) {
@@ -71,7 +76,7 @@ export class FormPage {
     this.glowingBtn.text = 'Sending failed!';
     this.cdr.detectChanges();
   }
-  
+
   openMail() {
     const subject = encodeURIComponent('Contact via Website');
     const body = encodeURIComponent('Hi,\n\n ...');

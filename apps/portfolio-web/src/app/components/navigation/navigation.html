@@ -1,35 +1,77 @@
 <div class="wrapper glass">
-    <Section class="navigation" [ngClass]="{
+  <section
+    class="navigation"
+    [ngClass]="{
         'open-nav': animationsEnabled && navigationOpen,
         'close-nav': animationsEnabled && !navigationOpen
-    }">
-        <div class="navigation__bar">
-            <img routerLink="/" src="img/signature-logo-transparent.png" alt="logo" class="navigation__bar--logo">
+    }"
+  >
+    <div class="navigation__bar">
+      <img
+        routerLink="/"
+        src="img/signature-logo-transparent.png"
+        alt="logo"
+        class="navigation__bar--logo"
+      />
 
-            <div class="navigation__bar--selection">
-                <span routerLink="/" class="navigation__bar--option">About me</span>
-                <span (click)="navigateToQna()" class="navigation__bar--option">QnA</span>
-                <span routerLink="/projects" class="navigation__bar--option">Projects</span>
-                <app-fancy-btn routerLink="/contact" [text]="'Contact me'"></app-fancy-btn>
-            </div>
+      <div class="navigation__bar--selection">
+        <span (click)="navigateToIntro()" class="navigation__bar--option"
+          >About me</span
+        >
+        <span (click)="navigateToQna()" class="navigation__bar--option"
+          >QnA</span
+        >
+        <span (click)="navigateToProjects()" class="navigation__bar--option"
+          >Projects</span
+        >
+        <app-fancy-btn
+          routerLink="/contact"
+          [text]="'Contact me'"
+        ></app-fancy-btn>
+      </div>
 
-            <div class="navigation__bar--btn" (click)="openMenu()">
-                <img class="line-1" src="img/line-horizontal.svg" [ngClass]="{'rotate-down': navigationOpen && animationsEnabled, 'reverse-rotate-down': !navigationOpen && animationsEnabled}">
-                <img class="line-2" src="img/line-horizontal.svg" [ngClass]="{'rotate-up': navigationOpen && animationsEnabled, 'reverse-rotate-up': !navigationOpen && animationsEnabled}">
-            </div>
-        </div>
+      <div class="navigation__bar--btn" (click)="openMenu()">
+        <img
+          class="line-1"
+          src="img/line-horizontal.svg"
+          [ngClass]="{'rotate-down': navigationOpen && animationsEnabled, 'reverse-rotate-down': !navigationOpen && animationsEnabled}"
+        />
+        <img
+          class="line-2"
+          src="img/line-horizontal.svg"
+          [ngClass]="{'rotate-up': navigationOpen && animationsEnabled, 'reverse-rotate-up': !navigationOpen && animationsEnabled}"
+        />
+      </div>
+    </div>
 
-        <div class="navigation__menu" [ngClass]="navigationOpen ? 'show' : 'hide'">
-            <div routerLink="/" class="navigation__menu--option td-150"  [ngClass]="navigationOpen ? 'show' : 'hide'">
-                About me
-            </div>
-            <div (click)="navigateToQna()" class="navigation__menu--option td-200"  [ngClass]="navigationOpen ? 'show' : 'hide'">
-                QnA
-            </div>
-            <div routerLink="/projects"  class="navigation__menu--option td-250"  [ngClass]="navigationOpen ? 'show' : 'hide'">
-                Projects
-            </div>
-            <app-fancy-btn routerLink="/contact" class="navigation__menu--special-option td-300" [ngClass]="navigationOpen ? 'show' : 'hide'" [text]="'Contact Me'"></app-fancy-btn>
-        </div>
-    </Section>
+    <div class="navigation__menu" [ngClass]="navigationOpen ? 'show' : 'hide'">
+      <div
+        (click)="navigateToIntro()"
+        class="navigation__menu--option td-150"
+        [ngClass]="navigationOpen ? 'show' : 'hide'"
+      >
+        About me
+      </div>
+      <div
+        (click)="navigateToQna()"
+        class="navigation__menu--option td-200"
+        [ngClass]="navigationOpen ? 'show' : 'hide'"
+      >
+        QnA
+      </div>
+      <div
+        (click)="navigateToProjects()"
+        class="navigation__menu--option td-250"
+        [ngClass]="navigationOpen ? 'show' : 'hide'"
+      >
+        Projects
+      </div>
+      <app-fancy-btn
+        routerLink="/contact"
+        class="navigation__menu--special-option td-300"
+        [ngClass]="navigationOpen ? 'show' : 'hide'"
+        [text]="'Contact Me'"
+      ></app-fancy-btn>
+    </div>
+  </section>
 </div>
