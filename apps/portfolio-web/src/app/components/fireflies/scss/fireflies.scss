@@ -1,0 +1,22 @@
+.fireflies {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.firefly {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffbc1 0%, white 40%, transparent 70%);
+  filter: blur(0.3px);
+  opacity: 0.8;
+  pointer-events: none;
+
+  animation: float var(--duration, 5s) ease-in-out infinite
+}
+
+@keyframes float {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(var(--travel-x, 200px), var(--travel-y, 200px)); }
+}

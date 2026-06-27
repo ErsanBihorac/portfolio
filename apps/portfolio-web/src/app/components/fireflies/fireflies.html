@@ -1,0 +1,14 @@
+<div class="fireflies">
+  <span
+    class="firefly"
+    *ngFor="let f of fireflies"
+    [style.left.%]="f.x"
+    [style.top.%]="f.y"
+    [style.width.px]="f.size"
+    [style.height.px]="f.size"
+    [style.animationDuration.s]="f.duration"
+    [style.animationDelay.s]="f.delay"
+    [style.--travel-x.px]="f.travelX"
+    [style.--travel-y.px]="f.travelY"
+  ></span>
+</div>

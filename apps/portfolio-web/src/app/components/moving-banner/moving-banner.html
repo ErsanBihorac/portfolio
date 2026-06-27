@@ -1,0 +1,33 @@
+<div class="banner fade-in-animation">
+    <div class="banner__track">
+        <div class="banner__set" [ngClass]="{
+                'animation-scroll-left': direction === 'left',
+                'animation-scroll-right': direction === 'right'
+                }">
+            @for (btn of buttons; track $index) {
+                <app-banner-btn [button]="btn" />
+            }
+        </div>
+
+        <div class="banner__set"            
+            [ngClass]="{
+                'animation-scroll-left': direction === 'left',
+                'animation-scroll-right': direction === 'right'
+                }">
+            @for (btn of buttons; track $index) {
+                <app-banner-btn [button]="btn" />
+            }
+        </div>
+
+        <div class="banner__set"            
+            [ngClass]="{
+                'animation-scroll-left': direction === 'left',
+                'animation-scroll-right': direction === 'right'
+                }">
+            @for (btn of buttons; track $index) {
+                <app-banner-btn [button]="btn" />
+            }
+        </div>
+    </div>
+</div>
+

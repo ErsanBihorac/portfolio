@@ -1,0 +1,41 @@
+@use './colors' as color;
+
+@mixin fade(
+  $name,
+  $duration,
+  $delay
+) {
+  animation: $name $duration ease-out forwards;
+  animation-delay: $delay;
+  opacity: 0;
+}
+
+@mixin anyAnimation(
+  $name,
+  $duration,
+  $delay, 
+  $style,
+  $repeat,
+  $opacity
+) {
+  animation: $name $duration $style $repeat;
+  animation-delay: $delay;
+  opacity: $opacity;
+}
+
+@mixin border-base($width, $height) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  padding: inherit;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+@mixin circle-base {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: color.$available;
+  border: 1px solid color.$available;
+}

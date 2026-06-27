@@ -1,0 +1,25 @@
+<section class="q-n-a">
+    <div #leftPart  class="q-n-a__left-part">
+        <div class="q-n-a__text-wrapper">
+            <div class="q-n-a__title">
+                <span class="title-animation-1">Your </span>
+                <span class="title-animation-2">Questions </span>
+                <span class="q-n-a__title-special title-animation-3">Answered </span>
+            </div>
+
+            <div class="q-n-a__description">
+                <span class="description-animation-1">Find the answers to most common </span>
+                <span class="description-animation-2">questions here, but if you still need help, </span>
+                <span class="description-animation-3">feel free to contact me.</span>
+            </div>
+        </div>
+
+        <app-glowing-btn (click)="navigateToContact()" class="button-animation" [button]="glowingBtn" size="medium" height="36px" width="160px"></app-glowing-btn>
+    </div>
+
+    <div class="q-n-a__right-part cards-animation">
+        @for (qna of questionAndAnswers; track $index; let i = $index) {
+            <app-q-n-a-card [qna]="qna" (click)="toggleAnswer(i)"></app-q-n-a-card>
+        }
+    </div>
+</section>

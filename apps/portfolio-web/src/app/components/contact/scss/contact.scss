@@ -1,0 +1,155 @@
+@use './../../../styles/colors' as color;
+@use './../../../styles/fonts' as font;
+@use './../../../styles/animations.component' as animation;
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 40px;
+    gap: 44px;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        left: 25%;
+        height: 2px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -40%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 80%;
+        background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), transparent 60%);
+        pointer-events: none;
+    }
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 800px) {
+        padding: 100px 18px;
+    }
+
+    &__line {
+        height: 1px;
+        width: 68px;
+        background: linear-gradient(to right, color.$font-primary, rgba(0,0,0,0));;
+    }
+
+    &__icon-line {
+        height: 100%;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 480px;
+        gap: 24px;
+    }
+
+    &__paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: color.$font-primary;
+        gap: 16px;
+    }
+
+    &__slogan {
+        font-size: 16px;
+    }
+
+    &__slogan-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        white-space: nowrap;
+    }
+
+    &__title {
+        font-size: 44px;
+        color: color.$font-secondary;
+
+        @media (max-width: 800px) {
+            font-size: 36px;
+        }
+    }
+
+    &__title-special {
+        color: color.$font-primary;
+        font-family: font.$font-secondary;
+        font-style: italic;
+    }
+
+    &__description {
+        font-size: 16px;
+        text-align: center;
+        padding: 0px 20px;
+    }
+
+    &__mail {
+        color: color.$font-secondary;
+        font-size: 16px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__social-media {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        height: 24px;
+    }
+
+    &__linkedin-icon {
+        width: 18px;
+        height: 18px;
+        fill: color.$font-primary;
+        transition: fill 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            fill: color.$font-secondary;
+        }
+    }
+
+    &__mail-icon {
+        width: 22px;
+        height: 22px;
+        fill: color.$font-primary;
+        transition: fill 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            fill: color.$font-secondary;
+        }
+    }
+}
+
+.rotate {
+    rotate: 180deg;
+}

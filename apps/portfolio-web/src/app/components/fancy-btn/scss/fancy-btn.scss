@@ -1,0 +1,31 @@
+@use './../../../styles/colors' as color;
+
+.btn {
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    color: color.$font-primary;
+    background-color: color.$bg-secondary;
+    border: solid 1px color.$border-primary;
+    border-radius: 120px;
+    font-size: 16px;
+
+    svg {
+        height: 24px;
+        fill: color.$font-primary;
+        stroke: black;
+        transition: 300ms;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: color.$font-secondary;
+        background: linear-gradient(to bottom, color.$bg-secondary, color.$bg-primary);
+        transition: 300ms;
+
+        svg {
+            fill: color.$font-secondary;
+        }
+    }
+}

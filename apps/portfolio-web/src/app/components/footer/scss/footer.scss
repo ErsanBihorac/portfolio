@@ -1,0 +1,58 @@
+@use './../../../styles/colors' as color;
+
+.footer {
+    padding: 60px 120px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(0, 0, 0)  100%
+        );
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+
+    &__link {
+        font-size: 16px;
+        text-decoration: underline;
+        color: color.$font-secondary;
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        padding: 60px 60px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        left: 25%;
+        height: 2px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 50%;
+        left: 25%;
+        height: 2px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    }
+
+}

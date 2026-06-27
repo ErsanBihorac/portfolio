@@ -1,0 +1,6 @@
+@use './../../../styles/animations.keyframes' as keyframe;
+@use './../../../styles/animations.mixins'as mixin;
+
+.fade-in-animation {
+  @include mixin.fade(fadeIn, 500ms, 500ms);
+}

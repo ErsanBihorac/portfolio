@@ -1,0 +1,119 @@
+@use './../../../styles/colors' as color;
+@use './../../../styles/fonts' as font;
+@use './animations.component' as animation;
+@use './../../../styles/animations.keyframes' as keyframe;
+
+.q-n-a {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 40px;
+    gap: 44px;
+    // background-color: color.$bg-primary;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        left: 25%;
+        height: 2px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -40%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 80%;
+        background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), transparent 60%);
+        pointer-events: none;
+    }
+
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 800px) {
+        padding: 100px 18px;
+    }
+
+    @media (max-width: 680px) {
+        align-items: flex-start;;
+    }
+
+    &__right-part {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (max-width: 1200px) {
+            width: 600px;
+        }
+
+        @media (max-width: 640px) {
+            width: 100%;
+        }
+    }
+
+    &__left-part {
+        width: 50%;
+        color: color.$font-secondary;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (max-width: 1200px) {
+            width: 600px;
+        }
+
+        @media (max-width: 640px) {
+            width: 100%;
+        }
+    }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__title {
+        font-size: 44px;
+        font-weight: 400;
+    }
+
+    &__title-special {
+        font-family: font.$font-secondary;
+        color: color.$font-primary;
+        font-style: italic;
+        font-size: 44px;
+        font-weight: 300;
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+        color: color.$font-primary;
+        max-width: 80%;
+        
+        @media (max-width: 680px) {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use './variables.animations' as var;
+@use './animations.mixins'as mixin;
+@use './animations.keyframes' as keyframe;
+
+@for $i from 1 through 21 {
+  .section-animation-#{$i} {
+    @include mixin.fade(
+      fadeInLeft,
+      900ms,
+      var.$section-delay-start + ($i - 1) * var.$section-delay-step
+    );
+  }
+}
+
+@for $i from 1 through 3 {
+  .contact-title-animation-#{$i} {
+    @include mixin.fade(
+      fadeInLeft,
+      900ms,
+      var.$contact-title-delay-start + ($i - 1) * var.$contact-delay-step
+    );
+  }
+}
+
+@for $i from 1 through 3 {
+  .contact-description-animation-#{$i} {
+    @include mixin.fade(
+      fadeInLeft,
+      900ms,
+      var.$contact-description-delay-start + ($i - 1) * var.$contact-delay-step
+    );
+  }
+}
+
+@for $i from 1 through 3 {
+  .intro-title-animation-#{$i} {
+    @include mixin.fade(
+      fadeInLeft,
+      900ms,
+      var.$intro-title-delay-start + ($i - 1) * var.$intro-delay-step
+    );
+  }
+}
+
+@for $i from 1 through 3 {
+  .intro-description-animation-#{$i} {
+    @include mixin.fade(
+      fadeInLeft,
+      900ms,
+      var.$intro-description-delay-start + ($i - 1) * var.$intro-delay-step
+    );
+  }
+}
+
+.btn-animation {
+  @include mixin.fade(fadeInLeft, 600ms, 1000ms);
+}
+
+.mail-slogan-animation {
+  @include mixin.fade(fadeInBottom, 600ms, 1000ms);
+}
+
+.paragraph-label-animation {
+  @include mixin.fade(fadeInUp, 400ms, 1000ms);
+}
+
+.fade-in-up-animation {
+  @include mixin.fade(fadeInUp, 400ms, 400ms);
+}
+
+.next-animation {
+  @include mixin.fade(fadeIn, 600ms, 500ms);
+}
+
+.bg-animation {
+  @include mixin.fade(fadeIn, 500ms, 500ms);
+}
+
+.next-btn-animation {
+  @include mixin.anyAnimation(float, 5s, 0ms, ease-in-out, infinite, 1);
+}
+
+.circle-text-animation {
+  @include mixin.anyAnimation(spin, 15s, 0ms, linear, infinite, 1);
+}
+
+.img-animation {
+  @include mixin.fade(fadeInBottom, 600ms, 1000ms);
+}
+
+.circle-static {
+  @include mixin.circle-base;
+  position: relative;
+}
+
+.circle-dynamic {
+  @include mixin.circle-base;
+  position: absolute;
+  animation: radar 2500ms infinite;
+}

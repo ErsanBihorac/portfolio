@@ -1,0 +1,9 @@
+<div class="button" [style.width]='width' [style.height]='height'>
+    <div [ngClass]="'border-base-' + size" class="glowing-border"></div>
+    <div [ngClass]="'animated-border-base-' + size" class="animated-border"></div>
+    <div [ngClass]="'border-base-' + size" [style.background-color]="bgColor ? bgColor : '#171818'" class="dark-border"></div>
+    <svg [attr.viewBox]="button.svg.viewBox">
+        <path [attr.d]="button.svg.path"/>
+    </svg>
+    {{ button.text }}
+</div>

@@ -1,0 +1,28 @@
+.line-1 {
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    top: 28px;
+}
+
+.line-2 {
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    top: 36px;
+}
+
+.glass {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}

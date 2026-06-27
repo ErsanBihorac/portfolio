@@ -1,0 +1,69 @@
+@use './animations.components' as animation;
+@use './../../../styles/animations.keyframes' as keyframe;
+
+.banner {
+    display: flex;
+    padding: 12px 40px;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+
+    --fade-width: 160px;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black var(--fade-width),
+        black calc(100% - var(--fade-width)),
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black var(--fade-width),
+        black calc(100% - var(--fade-width)),
+        transparent 100%
+    );
+
+    @media (max-width: 800px) {
+        --fade-width: 80px;
+    } 
+
+    &__track {
+        display: flex;
+        width: max-content;
+    }
+
+    &__set {
+        display: flex;
+        flex-shrink: 0;
+    }
+}
+
+.animation-scroll-left {
+    animation: scroll-left 20s linear infinite;
+}
+
+.animation-scroll-right {
+    animation: scroll-right 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

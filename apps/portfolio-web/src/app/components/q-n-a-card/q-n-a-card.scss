@@ -1,0 +1,86 @@
+@use './../../styles/colors' as color;
+
+.card {
+    border-radius: 12px;
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(
+        to top left,
+        color.$bg-primary 0%,
+        color.$bg-secondary 150%
+    );
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: inherit;
+
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.1) 10%,
+            transparent 40%
+        );
+
+        -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude;
+
+        pointer-events: none;
+    }
+    
+    &__unfolded {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__question {
+        color: color.$font-secondary;
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        transition: transform 0.4s;
+
+        svg {
+            height: 32px;
+            width: 32px;
+            fill: color.$font-secondary;
+            stroke: color.$font-secondary;
+            stroke-width: 1.1px;
+        }
+
+        &.spin {
+            transform: rotate(-135deg)
+        }
+    }
+
+    &__answer {
+        color: color.$font-primary;
+        font-size: 14px;
+        font-weight: 400;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+
+        &.active {
+            max-height: 200px;
+            opacity: 1;
+        }
+    }
+}

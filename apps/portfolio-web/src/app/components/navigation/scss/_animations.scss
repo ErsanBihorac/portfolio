@@ -1,0 +1,70 @@
+@for $i from 1 through 5 {
+  .td-#{($i + 1) * 50} {
+    transition: opacity 300ms ease;
+    transition-delay: #{($i + 1) * 50}ms;
+  }
+}
+
+//
+.open-nav {
+    animation: open-nav 500ms cubic-bezier(0, 0.95, 1, 1) forwards;
+}
+
+@keyframes open-nav {
+  from { height: 64px; }
+  to { height: 400px; }
+}
+
+//
+.close-nav {
+    animation: close-nav 500ms cubic-bezier(0, 0.95, 1, 1) forwards;
+}
+
+@keyframes close-nav {
+  from { height: 400px; }
+  to { height: 64px; }
+}
+
+//
+.rotate-down {
+    animation: rotate-down 300ms ease-in-out forwards;
+}
+
+@keyframes rotate-down {
+    0% { transform: rotate(0deg); top: 28px; } 
+    80% { transform: rotate(50deg); top: 30px; } 
+    100% {transform: rotate(45deg); top: 30px; }
+}
+
+//
+.reverse-rotate-down {
+    animation: reverse-rotate-down 300ms ease-in-out forwards;
+}
+
+@keyframes reverse-rotate-down {
+    0% { transform: rotate(45deg); top: 30px; } 
+    80% { transform: rotate(-5deg); top: 27px; } 
+    100% { transform: rotate(0deg); top: 28px; }
+}
+
+//
+.rotate-up {
+    animation: rotate-up 300ms ease-in-out forwards;
+}
+
+@keyframes rotate-up {
+    0% { transform: rotate(0deg); top: 36px; }
+    80% { transform: rotate(-50deg); } 
+    100% { transform: rotate(-45deg); top: 30px; }
+}
+
+//
+.reverse-rotate-up {
+    animation: reverse-rotate-up 300ms ease-in-out forwards;
+}
+
+@keyframes reverse-rotate-up {
+    0% { transform: rotate(-45deg); top: 30px; }
+    80% {top: 37px; transform: rotate(5deg); }
+    100% { top: 36px; transform: rotate(0deg); }
+}
