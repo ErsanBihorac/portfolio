@@ -1,6 +1,6 @@
 export interface email {
-  name: string;
-  email: string;
-  message: string;
-  website?: string;
+  senderName: string;
+  senderEmail: string;
+  senderMessage: string;
+  senderWebsite?: string;
 }

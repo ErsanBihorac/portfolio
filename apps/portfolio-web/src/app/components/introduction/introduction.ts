@@ -20,6 +20,7 @@ import { Router } from '@angular/router';
 })
 export class Introduction implements AfterViewInit {
   @Output() scrollNext = new EventEmitter<void>();
+  @Output() scrollToProjects = new EventEmitter<void>();
   @ViewChild('introSection') introSection!: ElementRef;
   wasViewed = false;
 
@@ -54,7 +55,8 @@ export class Introduction implements AfterViewInit {
   }
 
   navigateToProjects() {
-    this.router.navigate(['/projects']);
+    // this.router.navigate(['/projects']);
+    this.scrollToProjects.emit();
   }
 
   openMail() {

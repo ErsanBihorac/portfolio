@@ -32,4 +32,8 @@ export class Contact {
 
     window.location.href = `mailto:${this.mail}?subject=${subject}&body=${body}`;
   }
+
+  scrollUp() {
+    scrollTo(0, 0);
+  }
 }

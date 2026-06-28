@@ -5,7 +5,10 @@
 ></app-navigation>
 
 <main class="page-wrapper">
-  <app-introduction #introSection></app-introduction>
+  <app-introduction
+    #introSection
+    (scrollToProjects)="scrollToProjects()"
+  ></app-introduction>
   <app-questions-and-answers #qnaSection></app-questions-and-answers>
   <app-contact></app-contact>
   <app-projects #projectsSection></app-projects>

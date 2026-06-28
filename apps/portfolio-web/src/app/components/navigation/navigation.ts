@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FancyBtn } from '../fancy-btn/fancy-btn';
 import { Router, RouterLink } from '@angular/router';
@@ -9,7 +9,7 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './navigation.html',
   styleUrl: './scss/navigation.scss',
 })
-export class Navigation {
+export class Navigation implements AfterViewInit {
   @Output() scrollToQNA = new EventEmitter<void>();
   @Output() scrollToProjects = new EventEmitter<void>();
   @Output() scrollToIntro = new EventEmitter<void>();
