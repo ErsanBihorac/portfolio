@@ -29,12 +29,6 @@ export class Projects implements AfterViewInit {
         'A modern full-stack e-commerce application for pet products, featuring secure authentication, shopping cart functionality, Stripe payments, order management, and a responsive user experience.',
       projectUrl: '',
     },
-    {
-      title: 'Videoflix',
-      description:
-        'A full-stack video streaming platform featuring user authentication, video uploads, automated processing, and media streaming.',
-      projectUrl: '',
-    },
   ];
 
   ngAfterViewInit() {
