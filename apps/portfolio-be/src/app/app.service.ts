@@ -30,7 +30,8 @@ export class AppService {
 
       return result;
     } catch (error) {
-      console.error('errpr: ', error);
+      console.error('error: ', error);
+      throw error;
     }
   }
 }

@@ -23,6 +23,6 @@ export class ProjectShowcase {
   };
 
   navigateToProject(url: string) {
-    this.router.navigate([url]);
+    window.open(url, '_blank');
   }
 }

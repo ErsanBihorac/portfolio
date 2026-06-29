@@ -3,6 +3,7 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: '',
+    pathMatch: 'full',
     loadComponent: async () => {
       const module = await import('./components/landing-page/landing-page');
       return module.LandingPage;
@@ -32,9 +33,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: '**',
-    loadComponent: async () => {
-      const module = await import('./components/wild-card-page/wild-card-page');
-      return module.WildCardPage;
-    },
+    redirectTo: '',
   },
 ];
