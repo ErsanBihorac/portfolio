@@ -36,7 +36,7 @@ pm2 start ./ecosystem.config.js
 
 echo "Verifying backend process..."
 # This will show details or error if not running
-pm2 describe backend
+pm2 describe portfolio-backend
 
 #frontend
 echo "Navigating back to project root..."
@@ -62,7 +62,7 @@ echo "Starting frontend with pm2..."
 pm2 start ./ecosystem.config.js
 
 echo "Verifying frontend process..."
-pm2 describe frontend
+pm2 describe portfolio-frontend
 
 echo "Navigating back to project root..."
 cd ../../../../
