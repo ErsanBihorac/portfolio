@@ -1,3 +1,4 @@
+import { ConfigModule } from '@nestjs/config';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -5,6 +6,9 @@ import { MailerModule } from '@nestjs-modules/mailer';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     MailerModule.forRoot({
       transport: {
         host: process.env.MAIL_HOST,
